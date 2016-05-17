@@ -1,0 +1,263 @@
+#objects
+	background-block()
+
+	main
+		col(12)
+		padding-bottom $baseline*8
+		text-align center
+		padding 0
+
+		@media $tablet
+			col(12)
+			padding-bottom $baseline*12
+
+		@media $desktop
+			col(12)
+
+		.object-holder
+			content-block(center, flex-wrap)
+			margin 0
+
+			@media $tablet
+				margin 0 50px
+
+			.object
+				flexbox()
+				justify-content(space-around)
+				align-items(center)
+				width 100%
+				min-height 620px
+
+				@media $tablet
+					width 100%
+					min-height 635px
+
+				@media $desktop
+					width 50%
+
+				& > img
+					display inline-block
+					margin 0 auto
+
+
+			#broadside
+
+				& > .border
+					border 7px solid $silver
+					width 80%
+					padding 65px 25px
+
+					@media $tablet
+						width 45%
+
+					@media $desktop
+						width 55%
+
+					p
+						font-size 0.875rem
+
+					a
+						text-decoration none
+						padding-bottom 3px
+						border-bottom 1px solid $gold
+
+					.arrow-tail
+						background url("../images/icn_arrow-tail@2x.png") no-repeat center
+						background-size contain
+						height 40px
+						width 15px
+						margin $baseline*3 auto
+
+					.arrow-head
+						background url("../images/icn_arrow-head@2x.png") no-repeat center
+						background-size contain
+						height 25px
+						width 11px
+						margin $baseline*3 auto
+
+					ul
+						margin $baseline*2 0
+
+					li
+						margin $baseline*3 0
+						letter-spacing .1rem
+
+			#works
+				margin-bottom $baseline*0
+
+				@media $tablet
+					margin-bottom $baseline*10
+
+				& > .box
+					width 75%
+
+					@media $tablet
+						width 55%
+
+					@media $desktop
+						width 65%
+						margin-left -25px
+
+					img
+						margin-bottom $baseline*5
+					h2
+						margin-bottom $baseline*2
+
+			#disciplines
+				position relative
+				// margin-top -90px
+				margin-bottom $baseline*6
+
+				@media $tablet
+					margin-bottom $baseline*10
+
+				@media $desktop
+					margin-bottom $baseline*6
+
+				& > .box
+					width 90%
+
+					@media $tablet
+						width 75%
+
+					@media $desktop
+						margin-top -50px
+
+					a
+						text-decoration none
+						padding-bottom 3px
+						border-bottom 1px solid $gold
+
+					img
+						margin-bottom $baseline*5
+					h2
+						margin-bottom $baseline*2
+
+
+			#testimonial
+				margin-bottom $baseline*12
+				padding 0 20px
+
+				@media $tablet
+					margin-bottom $baseline*16
+
+				@media $desktop
+					margin-bottom $baseline*4
+
+				& > .border
+					background $silver
+					max-width 400px
+					padding 65px 50px 55px
+
+					@media $tablet
+						padding 75px 70px 60px
+
+					p
+						font-size 0.8125rem
+						margin-bottom $baseline*1.5
+						line-height 1.45rem
+
+					.quote
+						line-height 1.7rem
+						font-size 0.8125rem
+
+					span
+						display block
+						margin-bottom 3px
+
+
+			#thesis
+				margin-bottom $baseline*4
+
+				@media $tablet
+					margin-bottom $baseline*12
+
+				@media $desktop
+					margin-bottom $baseline*4
+
+				& > .border
+					width 320px
+					background $blue
+					position relative
+
+					@media $tablet
+						width 380px
+
+					&:before
+						content ""
+						position absolute
+						top 0
+						left 0
+						border-bottom 30px solid $blue
+						border-left 30px solid $black
+						border-right 30px solid $black
+						width 260px
+						height 0
+
+						@media $tablet
+							width 300px
+							border-bottom 40px solid $blue
+							border-left 40px solid $black
+							border-right 40px solid $black
+
+					&:after
+						content ""
+						position absolute
+						bottom 0
+						left 0
+						border-top 30px solid $blue
+						border-left 30px solid $black
+						border-right 30px solid $black
+						width 260px
+						height 0
+
+						@media $tablet
+							width 300px
+							border-top 40px solid $blue
+							border-left 40px solid $black
+							border-right 40px solid $black
+
+					.box
+						width 75%
+						margin 0 auto
+						padding 40px 0 35px 0px
+
+						@media $tablet
+							padding 60px 0 45px 0
+
+					p
+						font-size  0.8125rem
+						margin-bottom $baseline*2
+						line-height 1.75rem
+						letter-spacing 1.25px
+						padding 0 12px
+
+					img
+						width 50%
+						margin 0 auto $baseline*1.5
+
+					h2
+						margin-bottom $baseline*2
+
+
+			#fresh-eye
+				margin-bottom $baseline*9
+
+				@media $tablet
+					margin-bottom $baseline*4
+
+				& > .box
+					width 85%
+
+					@media $tablet
+						width 75%
+
+					a
+						text-decoration none
+						padding-bottom 3px
+						border-bottom 1px solid $gold
+
+					img
+						margin-bottom $baseline*6
+					h2
+						margin-bottom $baseline*2

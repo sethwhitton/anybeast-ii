@@ -1,0 +1,8 @@
+{
+  "name": "Anybeast.com",
+  "version": "1.0.0",
+  "description": "Marketing website",
+  "dependencies": {
+    "harp": "^0.20.3"
+  }
+}

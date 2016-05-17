@@ -1,0 +1,36 @@
+#about
+	background-block()
+
+	& > main
+		col(10,1)
+		text-align center
+		margin-bottom $baseline*8
+
+		@media $tablet
+			margin-bottom $baseline*4
+
+		.frame
+			// background url("../images/frame_mini@2x.png") no-repeat center
+			// background-size contain
+			center-block()
+
+			@media $tablet
+				background url("../images/frame_sm@2x.png") no-repeat center
+				background-size contain
+				min-height 870px
+
+			@media $desktop
+				background url("../images/frame_med@2x.png") no-repeat center
+				background-size contain
+				max-height 800px
+
+
+			& > .slide
+				width 75%
+				// height 600px
+
+			h2
+				padding-bottom $baseline*5
+
+			p:nth-child(1)
+				padding-bottom $baseline*5

@@ -1,0 +1,156 @@
+header
+  background-block()
+  background $black
+  // padding-bottom $baseline*8v
+
+  .hero
+    position relative
+    width 100%
+    height 100vh
+
+    .ace
+      display none
+      position absolute
+      // width 40px
+      // height 79px
+      // top 28px
+      // left 28px
+
+      @media $tablet
+        display inherit
+        width 49px
+        height 97px
+        top 35px
+        left 42px
+
+    & > img
+      width 100%
+      height 100%
+
+    .flip
+      flipit()
+      display none
+      position absolute
+      // width 40px
+      // height 79px
+      // bottom 28px
+      // right 28px
+
+      @media $tablet
+        display inherit
+        width 49px
+        height 97px
+        bottom 45px
+        right 42px
+
+      & > img
+        width 100%
+        height 100%
+
+    nav
+      display none
+      position absolute
+      height 20px
+      top 28px
+      // right 32px
+      margin 0 auto
+
+      @media $tablet
+        display inherit
+        width 300px
+        top 35px
+        right 35px
+
+      & > ul
+        float right
+
+        li
+          display block
+
+          @media $tablet
+            float left
+            margin-left 25px
+
+          // &:nth-child(1)
+          //   margin-left 0
+
+          a
+            text-decoration none
+            opacity .7
+
+            &:hover
+              color $white
+              opacity 1
+
+    p.mob
+      display block
+      position absolute
+      top 28px
+      height 20px
+      width 100%
+      text-align center
+      opacity .7
+
+      @media $tablet
+        display none
+
+      & > a
+        text-decoration none
+        padding-bottom 2px
+        border-bottom 1px solid $silver
+
+        &:hover
+          opacity 1
+          color $white
+          border-bottom 1px solid $white
+
+    .intro
+      position absolute
+      text-align center
+      top 28%
+      width 100%
+
+      @media $tablet
+        top 30%
+
+      .lockup
+        width 62%
+        margin 0 auto
+
+        @media $tablet
+          width 45%
+
+        @media $desktop
+          width 25%
+
+      .illo
+        width 100%
+        display block
+        margin 0 auto $baseline*3
+
+      .anybeast
+        width 90%
+        display block
+        margin 0 auto $baseline*3
+
+        @media $tablet
+          width 78%
+
+  .continue-arrow
+    background-block()
+    margin-bottom $baseline*6
+
+    & > div
+      margin -112px auto 0
+      width 100px
+
+      @media $tablet
+        margin -150px auto 0
+
+      img
+        width 15px
+        display block
+        margin 20px auto 0
+    p
+      text-align center
+      margin 0 auto

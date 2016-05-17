@@ -1,0 +1,126 @@
+// Lettuce Wrap – a mobile first flex grid
+
+// Fixing the Box Model
+*
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+// Grid settings
+$grid-max-width = 71.25em
+$grid-gutter = 0.625em
+$grid-total-columns = 12
+
+$default-body-font-size = 16px
+
+// Responsive breakpoints
+$desktop = unquote("only screen and (min-width: 60em)")
+$tablet = unquote("only screen and (min-width: 34em)")
+$phone = unquote("only screen and (max-width: 34em)")
+
+// Default margin
+$baseline = 8px
+
+// Set the body font size
+body
+  font-size $default-body-font-size
+
+// Responsive images
+img
+  max-width 100%
+  // display block
+
+// Image Flip
+flipit($around = 180deg)
+  -ms-transform: rotate($around);
+  -webkit-transform: rotate($around);
+  transform: rotate($around);
+
+// Flexbox grid
+// $full-bleed = 100%
+
+flexbox()
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  display -webkit-flex
+  display flex
+
+flex-flow()
+  -webkit-flex-flow row wrap
+  -ms-flex-flow row wrap
+  flex-flow row wrap
+
+justify-content($justify = flex-start)
+  -webkit-justify-content $justify
+  -ms-justify-content $justify
+  justify-content $justify
+
+align-items($align = flex-start)
+  -webkit-align-items $align
+  -ms-align-items $align
+  align-items $align
+
+background-block($justify = flex-start, $align = flex-start)
+  flexbox()
+  flex-flow()
+  justify-content($justify)
+  align-items($align)
+  width 100%
+  margin 0 auto
+
+content-block($justify = flex-start, $align = flex-start)
+  flexbox()
+  flex-flow($align)
+  justify-content($justify)
+  align-items()
+  max-width $grid-max-width
+  margin 0 auto
+
+center-block($justify = center, $align = center)
+  flexbox()
+  justify-content($justify)
+  align-items($align)
+  flex-flow no-wrap
+
+flex($flex)
+  -webkit-box-flex $flex
+  -moz-box-flex $flex
+  -ms-flex $flex
+  -webkit-flex $flex
+  flex $flex
+
+// The columns mixin
+col($columns, $offset = 0)
+  flex(1 auto)
+  padding-left $grid-gutter*3
+  padding-right $grid-gutter*3
+
+  @media $tablet
+    flex(0 (($columns / $grid-total-columns) * 100)%)
+    padding-left $grid-gutter
+    padding-right $grid-gutter
+
+  @media $desktop
+    flex(0 (($columns / $grid-total-columns) * 100)%)
+    padding-left $grid-gutter
+    padding-right $grid-gutter
+
+  if $offset > 0
+    @media $tablet
+      margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
+
+    @media $desktop
+      margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
+
+  if $offset == 0
+    @media $phone
+      margin-left 0
+
+    @media $tablet
+      margin-left 0
+
+    @media $desktop
+      margin-left 0
+
+.content-block
+  content-block()
