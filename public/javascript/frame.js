@@ -7,21 +7,34 @@ $(document).ready(function(){
       scrollBegin = $elBegin.offset().top,
       scrollEnd = $elEnd.offset().top,
       scrollTop,
-      docHeight,
-      frameHeight,
-      framePadding;
+      winHeight,
+      mobileHeight,
+      tabletHeight,
+      desktopHeight;
+
+  (function($){
+    calculateValues();
+    $frameWrap.css('padding-top', framePadding + 'px');
+  });
 
   function calculateValues() {
     scrollTop = $(window).scrollTop();
-    docHeight = window.innerHeight;
-    frameHeight = $('.frame').height();
-    framePadding = (docHeight - frameHeight) * .5;
+    winHeight = window.innerHeight;
+    desktopHeight = $('.desktop').height();
+    tabletHeight = $('.tablet').height();
+    mobileHeight = $('.mobile').height();
+  }
+
+  function framePadding() {
+    // $frameWrap.css('padding-top', (winHeight - mobileHeight) * .5 + 'px');
+    // $frameWrap.css('padding-top', (winHeight - tabletHeight) / 2 + 'px');
+    $frameWrap.css('padding-top', (winHeight - desktopHeight) * .5 + 'px');
   }
 
   function positionFrame() {
     if (scrollTop >= scrollBegin) {
       $frameWrap.addClass('active');
-      $frameWrap.css('padding-top', framePadding + 'px');
+      // $frameWrap.css('padding-top', framePadding + 'px');
       }
     if (scrollTop < scrollBegin) {
       $frameWrap.removeClass('active');
@@ -41,61 +54,20 @@ $(document).ready(function(){
 
   $(window).on("scroll",function() {
     calculateValues();
+    framePadding();
     positionFrame();
 
-    console.log('Window height is ' + docHeight);
-    console.log('Frame height is ' + frameHeight);
-    console.log('Frame padding is ' + framePadding);
+
+    console.log('Window height is ' + winHeight);
+    // console.log('Frame height is ' + frameHeight);
+    // console.log('Frame padding is ' + framePadding);
     console.log('----------------');
     console.log('Scroll begins at ' + scrollBegin);
     console.log('Scroll end at ' + scrollEnd);
     console.log('Scroll top is ' + scrollTop);
     console.log('----------------');
+    console.log('Mobile =' + mobileHeight + ' Tablet =' + tabletHeight + ' Desktop =' + desktopHeight);
+
 
   });
 });
-
-
-
-// $(document).ready(function(){
-
-//   var $elBegin = $('#about')
-//   var $elEnd = $('.disciplines')
-//   var scrollBegin = $elBegin.offset().top;
-//   var scrollEnd = $elEnd.offset().top
-//
-//   $(window).on("resize scroll",function() {
-//
-//     var scrollTop = $(window).scrollTop();
-//     var docHeight = window.innerHeight;
-//     var frameHeight = $('.frame').height();
-//     var framePadding = docHeight - frameHeight / 2;
-//
-//     if (scrollTop >= scrollBegin) {
-//       $('.frame-wrap').addClass('active');
-//       $('.frame-wrap').css('padding-top', (docHeight - frameHeight) * .5 + 'px');
-//     }
-//     if (scrollTop < scrollBegin) {
-//       $('.frame-wrap').removeClass('active');
-//     }
-//     if (scrollTop >= scrollEnd) {
-//       $('.frame-wrap').removeClass('active');
-//       $('.frame-wrap').addClass('end-active');
-//     }
-//     if (scrollTop < scrollEnd) {
-//       $('.frame-wrap').removeClass('end-active');
-//
-//     }
-//
-//     console.log('Window height is ' + docHeight);
-//     console.log('Frame height is ' + frameHeight);
-//     console.log('Frame padding is ' + framePadding);
-//     console.log('----------------');
-//     console.log('Scroll begins at ' + scrollBegin);
-//     console.log('Scroll end at ' + scrollEnd);
-//     console.log('Scroll top is ' + scrollTop);
-//     console.log('----------------');
-//
-//
-//   });
-// });

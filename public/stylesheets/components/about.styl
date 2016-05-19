@@ -5,23 +5,29 @@
 		position relative
 
 		.frame-wrap
-			width 100%
+			position absolute
 			height 100vh
 			padding 0 80px
-			position absolute
 
 			& > div
 				height 100vh
 
-				.frame
-					@media $tall
-						display none
+				// .desktop
+				// 	@media $tablet
+				// 		display none
+				//
+				// .tablet
+				// 	@media $desktop
+				// 		display none
+				// 	@media $phone
+				// 		display none
+				//
+				// .tall
+				// 	@media $tablet
+				// 		display none
+				// 	@media $desktop
+				// 		display none
 
-				.frame-tall
-					@media $common
-						display none
-					@media $taller
-						display none
 
 		.active
 			position fixed
@@ -30,7 +36,6 @@
 		.end-active
 			position absolute
 			bottom 0
-			// margin-top 155px
 
 		.frame-content
 			margin 0 auto
