@@ -30,17 +30,29 @@
 		 	.flex
 				center-block()
 
-				& > div
-					center-block()
+				.shell
 					width 70%
-					height 100vh
-					// background blue
 					margin-bottom $baseline*12
 
-				& > div:nth-child(2)
-					// background red
+					.introduction
+						height 100vh
+						background blue
 
+						& > img
+							max-width 180px
+							margin-bottom $baseline*4
 
+					.disciplines
+						center-block()
+						height 100vh
+						background red
+
+						.shapes
+							width 100%
+
+							& > img
+								max-width 200px
+								padding 0 30px
 
 
 
