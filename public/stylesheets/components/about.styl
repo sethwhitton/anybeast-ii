@@ -2,35 +2,112 @@
 	background-block()
 
 	& > main
-		col(10,1)
-		text-align center
-		margin-bottom $baseline*8
+		// position relative
 
-		@media $tablet
-			margin-bottom $baseline*4
+		.frame-wrap
+			width 99%
+			height 100vh
+			padding 0 80px
+			position absolute
 
-		.frame
-			// background url("../images/frame_mini@2x.png") no-repeat center
-			// background-size contain
-			center-block()
-
-			@media $tablet
-				background url("../images/frame_sm@2x.png") no-repeat center
+			.frame
+				background url("../images/frame_med@2x.png") no-repeat top center
 				background-size contain
-				min-height 870px
+				height 100vh
+				margin 6% auto // Might need to be dynamically added in
 
-			@media $desktop
-				background url("../images/frame_med@2x.png") no-repeat center
-				background-size contain
-				max-height 800px
+		.active
+			position fixed
+			top 0
+			left 0
+
+		.frame-content
+			margin 0 auto
+			text-align center
+			width 85%
+			height 100vh
+
+		 	.flex
+				center-block()
+
+				& > div
+					center-block()
+					width 70%
+					height 100vh
+					// background blue
+					margin-bottom $baseline*12
+
+				& > div:nth-child(2)
+					// background red
 
 
-			& > .slide
-				width 75%
-				// height 600px
 
-			h2
-				padding-bottom $baseline*5
 
-			p:nth-child(1)
-				padding-bottom $baseline*5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// background-block()
+	//
+	// & > main
+	// 	col(10,1)
+	// 	text-align center
+	// 	margin-bottom $baseline*16
+	//
+	// 	@media $tablet
+	// 		margin-bottom $baseline*20
+	//
+	// 	.wrapper
+	// 		position relative
+	//
+	// 		.frame
+	// 			position absolute
+	// 			height 100%
+	// 			width 100%
+	// 			max-height 900px
+	// 			background url("../images/frame_med@2x.png") no-repeat top center
+	// 			background-size contain
+	//
+	// 		.frame-content
+	// 			center-block()
+	//
+	// 			& > div
+	// 				height 900px
+	// 				width 80%
+	//
+	// 		.active
+	// 			position fixed
+	// 			top 50%
+	// 			left 50%
+	// 			// margin-left -50%
+	// 			// margin-top -50%
+	// 			transform translate(-50%,-50%)
+	// 			// width 100%
+	// 			// max-width 1000px
+	//
+	// 			h2
+	// 				padding-bottom $baseline*5
+	//
+	// 			p:nth-child(1)
+	// 				padding-bottom $baseline*5

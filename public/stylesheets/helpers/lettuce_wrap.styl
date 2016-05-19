@@ -92,18 +92,18 @@ flex($flex)
 // The columns mixin
 col($columns, $offset = 0)
   flex(1 auto)
-  padding-left $grid-gutter*3
-  padding-right $grid-gutter*3
+  // padding-left $grid-gutter*3
+  // padding-right $grid-gutter*3
 
   @media $tablet
     flex(0 (($columns / $grid-total-columns) * 100)%)
-    padding-left $grid-gutter
-    padding-right $grid-gutter
+    // padding-left $grid-gutter
+    // padding-right $grid-gutter
 
   @media $desktop
     flex(0 (($columns / $grid-total-columns) * 100)%)
-    padding-left $grid-gutter
-    padding-right $grid-gutter
+    // padding-left $grid-gutter
+    // padding-right $grid-gutter
 
   if $offset > 0
     @media $tablet

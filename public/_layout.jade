@@ -2,8 +2,11 @@ doctype
 head
   title #{title}
   link(rel='stylesheet' href='stylesheets/main.css')
-  //- link(rel='stylesheet' href='stylesheets/animate.css')
   meta(name='viewport' content='width=device-width, height=device-height initial-scale=1')
 
 body
   != yield
+
+  script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js")
+  script(type="text/javascript", src="javascript/frame.js")
+    
