@@ -6,15 +6,12 @@ header
   .hero
     position relative
     width 100%
-    min-height 900px
+    max-height 80vh
+    min-height 920px
 
     .ace
       display none
       position absolute
-      // width 40px
-      // height 79px
-      // top 28px
-      // left 28px
 
       @media $tablet
         display inherit
@@ -31,10 +28,6 @@ header
       flipit()
       display none
       position absolute
-      // width 40px
-      // height 79px
-      // bottom 28px
-      // right 28px
 
       @media $tablet
         display inherit
@@ -47,94 +40,104 @@ header
         width 100%
         height 100%
 
-    nav
-      display none
-      position absolute
-      height 20px
-      top 28px
-      // right 32px
-      margin 0 auto
+    // nav
+    //   display none
+    //   position absolute
+    //   height 20px
+    //   top 28px
+    //   // right 32px
+    //   margin 0 auto
+    //
+    //   @media $tablet
+    //     display inherit
+    //     width 300px
+    //     top 35px
+    //     right 35px
+    //
+    //   & > ul
+    //     float right
+    //
+    //     li
+    //       display block
+    //
+    //       @media $tablet
+    //         float left
+    //         margin-left 25px
+    //
+    //       a
+    //         text-decoration none
+    //         opacity .7
+    //
+    //         &:hover
+    //           color $white
+    //           opacity 1
+    //
 
-      @media $tablet
-        display inherit
-        width 300px
-        top 35px
-        right 35px
-
-      & > ul
-        float right
-
-        li
-          display block
-
-          @media $tablet
-            float left
-            margin-left 25px
-
-          // &:nth-child(1)
-          //   margin-left 0
-
-          a
-            text-decoration none
-            opacity .7
-
-            &:hover
-              color $white
-              opacity 1
-
-    p.mob
+    .mob
       display block
       position absolute
-      top 28px
-      height 20px
+      top 75px
       width 100%
       text-align center
-      opacity .7
+      margin-bottom $baseline*5
 
       @media $tablet
         display none
 
-      & > a
-        text-decoration none
+      & > p
         padding-bottom 2px
-        border-bottom 1px solid $silver
 
-        &:hover
-          opacity 1
-          color $white
-          border-bottom 1px solid $white
+        &:nth-child(2)
+          padding-bottom 3px
+          margin-top -6px
 
     .intro
-      position absolute
       text-align center
-      top 28%
+      margin-top 220px
       width 100%
 
       @media $tablet
-        top 30%
+        top 220px
 
       .lockup
-        width 62%
+        width 80%
         margin 0 auto
 
         @media $tablet
-          width 45%
+          width 60%
 
         @media $desktop
-          width 25%
-
-      .illo
-        width 100%
-        display block
-        margin 0 auto $baseline*3
+          max-width 418px
+          width 34%
 
       .anybeast
-        width 90%
         display block
-        margin 0 auto $baseline*3
+        margin 0 auto 53px
+        max-width 200px
 
         @media $tablet
-          width 78%
+          max-width 256px
+
+      .tagline
+        width 100%
+        display none
+        margin-bottom $baseline*2
+
+        @media $tablet
+          display block
+
+      .illo
+        max-width 250px
+        margin -28px auto $baseline*5.5 auto
+        display block
+
+        @media $tablet
+          max-width 334px
+
+      .down-arrow
+        width 15px
+        margin 0 auto
+
 
   .continue-arrow
     background-block()

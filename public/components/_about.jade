@@ -1,22 +1,29 @@
 section#about
   main
     .frame-wrap
-      .frame
+      div
+        img.frame(src='/images/frame_1336@2x.png')
+        img.frame-tall(src='/images/frame_1336-tall@2x.png')
     .frame-content
       .flex  
-        .shell
-          .introduction
+        //- .shell
+        .introduction
+          div
             img(src='/images/illo_mystic-key@2x.png')
             h2.headline.large Anybeast is a digital design and strategy SWAT team based in NYC
             p.caps @Amanda !! Infusing our clients with fresh thinking and expert design
-          .disciplines
+        .disciplines
+          div
             p.caps.gold We leverage
             h2.end.headline.large Street smarts, industry knowledge and wondrous disciplines of design
             p.caps.gold To create the future
             .shapes
-              img.ux(src='/images/illo_ux@2x.png')
-              img.content(src='/images/illo_content@2x.png')
-              img(src='/images/illo_visual@2x.png')
+              .ux
+                img(src='/images/illo_ux@2x.png')
+              .content
+                img(src='/images/illo_content@2x.png')
+              .visual
+                img(src='/images/illo_visual@2x.png')
           
 
 
