@@ -41,6 +41,7 @@
 
 
 			#broadside
+				position relative
 
 				& > .border
 					border 7px solid $silver
@@ -52,6 +53,9 @@
 
 					@media $desktop
 						width 55%
+
+					&:hover
+						cursor pointer
 
 					p
 						font-size 0.875rem
@@ -104,11 +108,8 @@
 						margin-bottom $baseline*1.5
 
 
-
-
 			#disciplines
 				position relative
-				// margin-top -90px
 				margin-bottom $baseline*6
 
 				@media $tablet
@@ -126,6 +127,8 @@
 					@media $desktop
 						margin-top -50px
 
+					&:hover
+						cursor pointer
 					a
 						text-decoration none
 						padding-bottom 3px
@@ -242,8 +245,8 @@
 					h2
 						margin-bottom $baseline*2
 
-
 			#fresh-eye
+				position relative
 				margin-bottom $baseline*9
 
 				@media $tablet
@@ -254,6 +257,9 @@
 
 					@media $tablet
 						width 75%
+
+					&:hover
+						cursor pointer
 
 					a
 						text-decoration none

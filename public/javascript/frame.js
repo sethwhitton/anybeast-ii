@@ -20,9 +20,9 @@ $(document).ready(function(){
   }
 
   function framePadding() {
-    if ($(window).width() > 768){
+    // if ($(window).width() > 768){
       $frameWrap.css('padding-top', (winHeight - desktopHeight) / 2 + 'px');
-    }
+    // }
   }
 
   function positionFrame() {
@@ -35,12 +35,24 @@ $(document).ready(function(){
     if (scrollTop >= scrollEnd) {
       $frameWrap.removeClass('active');
       $frameWrap.addClass('end-active');
-      $frameWrap.css('padding-top', '');
+      // $frameWrap.css('padding-top', '');
       }
     if (scrollTop < scrollEnd) {
       $frameWrap.removeClass('end-active');
       }
     }
+
+  $('#broadside > .border').click(function() {
+      $('.box1').toggleClass('active');
+  });
+
+  $('#disciplines > .box').click(function() {
+      $('.box2').toggleClass('active');
+  });
+
+  $('#fresh-eye > .box').click(function() {
+      $('.box3').toggleClass('active');
+  });
 
   $(window).on("resize",function() {
     calculateValues();
@@ -54,12 +66,12 @@ $(document).ready(function(){
 
     console.log('Window height is ' + winHeight);
     console.log('----------------');
+    console.log('Scroll top is ' + scrollTop);
     console.log('Scroll begins at ' + scrollBegin);
     console.log('Scroll end at ' + scrollEnd);
-    console.log('Scroll top is ' + scrollTop);
     console.log('----------------');
-    console.log('Frame heights: *Mobile =' + mobileHeight + ' *Tablet =' + tabletHeight + ' *Desktop =' + desktopHeight);
-    console.log('Tablet padding = ' + (winHeight - tabletHeight) * .5 + 'px')
+    console.log('Frame height: Desktop = ' + desktopHeight);
+    console.log('Frame padding = ' + (winHeight - desktopHeight) * .5 + 'px')
 
     });
 });
