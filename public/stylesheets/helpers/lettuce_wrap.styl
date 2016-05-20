@@ -16,10 +16,9 @@ $default-body-font-size = 16px
 $desktop = unquote("only screen and (min-width: 60em)")
 $tablet = unquote("only screen and (min-width: 34em)")
 $phone = unquote("only screen and (max-width: 34em)")
-
-$common = unquote("only screen and (max-height: 768px)")
-$tall = unquote("only screen and (min-height: 769px) and (max-height: 968px)")
-$taller = unquote("only screen and (min-height: 969px)")
+// $common = unquote("only screen and (max-height: 768px)")
+// $tall = unquote("only screen and (min-height: 769px) and (max-height: 968px)")
+// $taller = unquote("only screen and (min-height: 969px)")
 
 // Default margin
 $baseline = 8px
@@ -110,6 +109,9 @@ col($columns, $offset = 0)
     // padding-right $grid-gutter
 
   if $offset > 0
+    @media $phone
+      margin 0 ((($offset / $grid-total-columns) * 100)%) - 2.94117%
+
     @media $tablet
       margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
 

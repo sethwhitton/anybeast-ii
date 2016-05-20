@@ -12,29 +12,22 @@ $(document).ready(function(){
       tabletHeight,
       desktopHeight;
 
-  (function($){
-    calculateValues();
-    $frameWrap.css('padding-top', framePadding + 'px');
-  });
 
   function calculateValues() {
     scrollTop = $(window).scrollTop();
     winHeight = window.innerHeight;
     desktopHeight = $('.desktop').height();
-    tabletHeight = $('.tablet').height();
-    mobileHeight = $('.mobile').height();
   }
 
   function framePadding() {
-    // $frameWrap.css('padding-top', (winHeight - mobileHeight) * .5 + 'px');
-    // $frameWrap.css('padding-top', (winHeight - tabletHeight) / 2 + 'px');
-    $frameWrap.css('padding-top', (winHeight - desktopHeight) * .5 + 'px');
+    if ($(window).width() > 768){
+      $frameWrap.css('padding-top', (winHeight - desktopHeight) / 2 + 'px');
+    }
   }
 
   function positionFrame() {
     if (scrollTop >= scrollBegin) {
       $frameWrap.addClass('active');
-      // $frameWrap.css('padding-top', framePadding + 'px');
       }
     if (scrollTop < scrollBegin) {
       $frameWrap.removeClass('active');
@@ -42,6 +35,7 @@ $(document).ready(function(){
     if (scrollTop >= scrollEnd) {
       $frameWrap.removeClass('active');
       $frameWrap.addClass('end-active');
+      $frameWrap.css('padding-top', '');
       }
     if (scrollTop < scrollEnd) {
       $frameWrap.removeClass('end-active');
@@ -59,15 +53,13 @@ $(document).ready(function(){
 
 
     console.log('Window height is ' + winHeight);
-    // console.log('Frame height is ' + frameHeight);
-    // console.log('Frame padding is ' + framePadding);
     console.log('----------------');
     console.log('Scroll begins at ' + scrollBegin);
     console.log('Scroll end at ' + scrollEnd);
     console.log('Scroll top is ' + scrollTop);
     console.log('----------------');
-    console.log('Mobile =' + mobileHeight + ' Tablet =' + tabletHeight + ' Desktop =' + desktopHeight);
+    console.log('Frame heights: *Mobile =' + mobileHeight + ' *Tablet =' + tabletHeight + ' *Desktop =' + desktopHeight);
+    console.log('Tablet padding = ' + (winHeight - tabletHeight) * .5 + 'px')
 
-
-  });
+    });
 });

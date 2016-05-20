@@ -1,13 +1,16 @@
 header
   background-block()
   background $black
-  // padding-bottom $baseline*8v
+  // margin-bottom $baseline*8
 
   .hero
     position relative
     width 100%
     max-height 80vh
-    min-height 920px
+    min-height 720px
+
+    @media $tablet
+      min-height 920px
 
     .ace
       display none
@@ -39,39 +42,6 @@ header
       & > img
         width 100%
         height 100%
-
-    // nav
-    //   display none
-    //   position absolute
-    //   height 20px
-    //   top 28px
-    //   // right 32px
-    //   margin 0 auto
-    //
-    //   @media $tablet
-    //     display inherit
-    //     width 300px
-    //     top 35px
-    //     right 35px
-    //
-    //   & > ul
-    //     float right
-    //
-    //     li
-    //       display block
-    //
-    //       @media $tablet
-    //         float left
-    //         margin-left 25px
-    //
-    //       a
-    //         text-decoration none
-    //         opacity .7
-    //
-    //         &:hover
-    //           color $white
-    //           opacity 1
-    //
 
     .mob
       display block
