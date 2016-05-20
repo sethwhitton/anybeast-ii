@@ -41,6 +41,10 @@ $(document).ready(function(){
       $frameWrap.removeClass('end-active');
       }
     }
+  //
+  // $('.object').click(function(){
+  //   $(this).next('.modal').toggleClass('.active');
+  // });
 
   $('#broadside > .border').click(function() {
       $('.box1').toggleClass('active');
