@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
   var $elBegin = $('#about'),
-      $elEnd = $('.disciplines'),
+      $elEnd = $('.our-disciplines'),
       $frameWrap = $('.frame-wrap'),
       scrollBegin = $elBegin.offset().top,
       scrollEnd = $elEnd.offset().top,
@@ -16,7 +16,7 @@ $(document).ready(function(){
   function calculateValues() {
     scrollTop = $(window).scrollTop();
     winHeight = window.innerHeight;
-    desktopHeight = $('.desktop').height();
+    desktopHeight = $('.desktop').outerHeight(true);
   }
 
   function framePadding() {
@@ -41,10 +41,6 @@ $(document).ready(function(){
       $frameWrap.removeClass('end-active');
       }
     }
-  //
-  // $('.object').click(function(){
-  //   $(this).next('.modal').toggleClass('.active');
-  // });
 
   $('#broadside > .border').click(function() {
       $('.box1').toggleClass('active');
@@ -61,6 +57,7 @@ $(document).ready(function(){
   $(window).on("resize",function() {
     calculateValues();
   });
+
 
   $(window).on("scroll",function() {
     calculateValues();

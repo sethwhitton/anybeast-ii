@@ -21,6 +21,19 @@
 						display none
 					@media $desktop
 						display block
+					@media $tall
+						display none
+
+				.tall
+					@media $phone
+						display none
+					@media $tablet
+						display none
+					@media $desktop
+						display none
+					@media $tall
+						display block
+
 
 		.active
 			position fixed
@@ -56,15 +69,16 @@
 					width 100%
 					center-block()
 					border-bottom 1px solid $light-grey
-					margin-bottom $baseline*8
+					border-top 1px solid $light-grey
+
 
 					@media $tablet
-						background url('../images/frame_mini@2x.png') no-repeat center center
-						background-size contain
 						width 100%
 						min-width 450px
 						height 100vh
 						border none
+						background url('../images/frame_mini@2x.png') no-repeat center center
+						background-size contain
 
 					@media $desktop
 						background none
@@ -78,86 +92,132 @@
 
 						& > img
 							max-width 140px
-							margin-bottom $baseline*4
+							margin-bottom $baseline*2
 
 							@media $tablet
+								max-width 140px
+								margin-bottom $baseline*4
+
+							@media $desktop
 								max-width 180px
 
+						h2
+							padding 0 30px
+							max-width 900px
 
-				.disciplines
+				.how-we-work
+					min-height 550px
+					width 100%
 					center-block()
-					// margin-bottom $baseline*14
 					border-bottom 1px solid $light-grey
-					margin-bottom $baseline*7
+
+					@media $tablet
+						width 100%
+						min-width 450px
+						height 100vh
+						border none
+
+					& > div
+						padding 0 30px
+
+						@media $tablet
+							padding 0
+
+						p
+							margin-bottom $baseline*2
+
+						h2
+							padding 0
+							max-width 900px
+
+							@media $tablet
+								padding 0 60px
+
+				.our-disciplines
+					center-block()
+					// margin-bottom $baseline*7
 					padding 0 30px
+					border-bottom 1px solid $light-grey
 
 					@media $tablet
 						height 100vh
-						margin-bottom 0
+						// margin-bottom $baseline*5
+						border-bottom 1px solid $$light-grey
+
+					@media $desktop
+						margin-bottom none
 						border-bottom none
 
-					p
-						margin-bottom $baseline*3
-
-					h2
-						width 75%
-						margin 0 auto
-						margin-bottom $baseline*3
-
-
-					.shapes
-						@media $phone
-							text-align center
-							margin-top $baseline*5
-							margin-bottom $baseline*12
+					& > div
+						margin-top $baseline*12
 
 						@media $tablet
-							flexbox()
-							justify-content center
-							align-items center
-							flex-wrap wrap
+							margin-top 0
+
+						p
+							margin-bottom $baseline*3
+
+						h2
 							width 100%
-							margin-top $baseline*6
-
-						@media $desktop
-							flex-wrap nowrap
-
-						.ux
-							width 60%
-							margin 0 auto $baseline*4
+							margin 0 auto
+							margin-bottom $baseline*3
 
 							@media $tablet
-								width 200px
-								margin 0 30px 30px 0
+								width 75%
 
-							@media $desktop
-								max-width 250px
-								width 19%
-								margin 0 27px 0 0
-
-						.content
-							width 62%
-							margin 0 auto $baseline*4
+						.shapes
+							@media $phone
+								text-align center
+								margin-top $baseline*5
+								margin-bottom $baseline*12
 
 							@media $tablet
-								width 220px
-								margin 0 0 30px 30px
+								flexbox()
+								justify-content center
+								align-items center
+								flex-wrap wrap
+								width 100%
+								margin-top $baseline*6
 
 							@media $desktop
-								max-width 285px
-								padding-bottom 50px
-								margin 0 25px 0 0
-								width 21%
+								flex-wrap nowrap
 
-						.visual
-							width 60%
-							margin 0 auto $baseline*4
+							.ux
+								width 60%
+								margin 0 auto $baseline*4
 
-							@media $tablet
-								width 200px
-								margin 0 10px
+								@media $tablet
+									width 200px
+									margin 0 30px 30px 0
 
-							@media $desktop
-								max-width 240px
-								width 19%
-								margin 0 15px
+								@media $desktop
+									max-width 250px
+									width 19%
+									margin 0 27px 0 0
+
+							.content
+								width 62%
+								margin 0 auto $baseline*4
+
+								@media $tablet
+									width 220px
+									margin 0 0 0 30px
+
+								@media $desktop
+									max-width 285px
+									padding-bottom 50px
+									margin 0 25px 0 0
+									width 21%
+
+							.visual
+								width 60%
+								margin 0 auto $baseline*4
+
+								@media $tablet
+									width 200px
+									margin 0 10px
+
+								@media $desktop
+									max-width 240px
+									width 19%
+									margin 0 15px
