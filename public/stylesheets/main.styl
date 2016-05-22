@@ -1,8 +1,9 @@
 @import 'reset'
 @import 'helpers/lettuce_wrap'
+@import 'helpers/colors'
 @import 'helpers/type'
 @import 'helpers/fonts'
-@import 'helpers/colors'
+
 
 @import 'components/header'
 @import 'components/about'
@@ -14,9 +15,11 @@
 
 html
   background $black
-  border 10px solid $light-grey
 
 body
   font-family $font-family1
   font-weight $type-light
   color $white
+
+.border-wrap
+  border 10px solid $light-grey

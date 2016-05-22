@@ -21,6 +21,7 @@ $(document).ready(function(){
 
   function framePadding() {
     // if ($(window).width() > 768){
+      $frameWrap.removeAttr('style')
       $frameWrap.css('padding-top', (winHeight - desktopHeight) / 2 + 'px');
     // }
   }
@@ -42,28 +43,21 @@ $(document).ready(function(){
       }
     }
 
-  $('#broadside > .border').click(function() {
-      $('.box1').toggleClass('active');
-  });
+    $('.desktop').load(function(){
+      calculateValues();
+      framePadding();
+    });
 
-  $('#disciplines > .box').click(function() {
-      $('.box2').toggleClass('active');
-  });
+    $(window).on("resize",function() {
+      calculateValues();
+      framePadding();
+      positionFrame();
+    });
 
-  $('#fresh-eye > .box').click(function() {
-      $('.box3').toggleClass('active');
-  });
-
-  $(window).on("resize",function() {
-    calculateValues();
-  });
-
-
-  $(window).on("scroll",function() {
-    calculateValues();
-    framePadding();
-    positionFrame();
-
+    $(window).on("scroll",function() {
+      calculateValues();
+      positionFrame();
+    });
 
     console.log('Window height is ' + winHeight);
     console.log('----------------');
@@ -74,5 +68,17 @@ $(document).ready(function(){
     console.log('Frame height: Desktop = ' + desktopHeight);
     console.log('Frame padding = ' + (winHeight - desktopHeight) * .5 + 'px')
 
+
+    $('#broadside > .border').click(function() {
+      $('.box1').toggleClass('active','modal');
     });
+
+    $('#disciplines > .box').click(function() {
+      $('.box2').toggleClass('active');
+    });
+
+    $('#fresh-eye > .box').click(function() {
+      $('.box3').toggleClass('active');
+    });
+
 });
