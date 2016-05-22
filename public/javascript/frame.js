@@ -59,16 +59,6 @@ $(document).ready(function(){
       positionFrame();
     });
 
-    console.log('Window height is ' + winHeight);
-    console.log('----------------');
-    console.log('Scroll top is ' + scrollTop);
-    console.log('Scroll begins at ' + scrollBegin);
-    console.log('Scroll end at ' + scrollEnd);
-    console.log('----------------');
-    console.log('Frame height: Desktop = ' + desktopHeight);
-    console.log('Frame padding = ' + (winHeight - desktopHeight) * .5 + 'px')
-
-
     $('#broadside > .border').click(function() {
       $('.box1').toggleClass('active','modal');
     });
