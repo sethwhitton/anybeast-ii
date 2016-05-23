@@ -25,43 +25,6 @@ section#objects
             h2.medium.headline Past & Present Works
             p.caps Coming Soon!
 
-        #disciplines.object
-          .box
-            img(src='/images/illo_swords@2x.png')
-            h2.medium.headline Our Trifecta of Disciplines
-            a.caps.gold(href="#open") Three is better than One
-            
-            != partial('../components/modals/_trifecta')
-          
-        #thesis.object
-          .border
-            .box
-              img(src='/images/illo_moonstar@2x.png')
-              p.caps.dark-blue We believe
-              h2.medium.headline The Future of Design is Personal
-              p.caps.dark-blue Our goal is to reduce noise and deliver the strongest signals. By deeply understanding users’ needs, desires and behaviors we help companies create personal, clever and authentic experiences for their customers.
-              
-        #testimonial.object
-          .border
-            .box
-              h2.caps.featherwi.dark We like to use “outsider” to our advantage
-              div.vert-divider
-                svg(height='20px' width='2px')
-                  line(x1="0" y1="0" x2="0" y2="20" style="stroke:rgb(0,0,0);stroke-width:2")
-              ul
-                li 
-                  h3.caps.white Intentional middlemen
-                  p.caps.dark We consider being outsiders a strength. It allows us to be both customer and business advocates – acting as conduits between the two.
-                li 
-                  h3.caps.white Future Focused Pragmatists
-                  p.caps.dark We pay particular attention to untapped possibilities and opportunities for success in areas beyond the project space
-                div.vert-divider
-                  svg(height='20px' width='2px')
-                    line(x1="0" y1="0" x2="0" y2="20" style="stroke:rgb(0,0,0);stroke-width:2")
-                a.caps.dark(href='#null') @amanda What can we put here?
-                
-                  
-
         #fresh-eye.object
           .box
             img(src='/images/illo_handeye@2x.gif')
@@ -70,3 +33,43 @@ section#objects
             
             //- != partial('../components/modals/_outsiders')
             
+        #testimonial.object
+          .border
+            .box
+      
+              ul
+                li.maxd
+                  div.vert-divider1
+                    svg(height='2px' width='260px')
+                      line(x1="0" y1="0" x2="260" y2="0" style="stroke:rgb(0,0,0);stroke-width:2")
+                  h2.featherweight.white We like to use “outsider” to our advantage
+                li 
+                  h3.caps.white Intentional middlemen
+                  p.caps.dark We consider being outsiders a strength. It allows us to be both customer and business advocates – acting as conduits between the two.
+                li 
+                  h3.caps.white Future Focused Pragmatists
+                  p.caps.dark We pay particular attention to untapped possibilities and opportunities for success in areas beyond the project space.
+                  div.vert-divider2
+                    svg(height='2px' width='260px')
+                      line(x1="0" y1="0" x2="260" y2="0" style="stroke:rgb(0,0,0);stroke-width:2")
+                
+                //- div.vert-divider
+                //-   svg(height='20px' width='2px')
+                //-     line(x1="0" y1="0" x2="0" y2="20" style="stroke:rgb(0,0,0);stroke-width:2")
+                //- a.caps.dark(href='#null') @amanda What can we put here?
+                //- 
+          
+        #thesis.object
+          .border
+            .box
+              img(src='/images/illo_moonstar@2x.png')
+              p.caps.dark-blue We believe
+              h2.medium.headline The Future of Design is Personal
+              p.caps.dark-blue Our goal is to reduce noise and deliver the strongest signals. By deeply understanding users’ needs, desires and behaviors we help companies create personal, clever and authentic experiences for their customers.
+        #disciplines.object
+          .box
+            img(src='/images/illo_swords@2x.png')
+            h2.medium.headline Our Trifecta of Disciplines
+            a.caps.gold(href="#open") Three is better than One
+            
+            != partial('../components/modals/_trifecta')  
