@@ -153,18 +153,21 @@
 					border 1px solid $black
 					background $silver
 					max-width 360px
-					padding 65px 50px 55px
-
-					@media $tablet
-						padding 30px 0 30px
+					padding 30px 0px
 
 					.vert-divider1
-						margin-top $baseline*3.5
+						margin-top 10px
 						margin-bottom $baseline*5
+
+						@media $tablet
+							margin-top $baseline*3.5
 
 					.vert-divider2
 						margin-top $baseline*5
-						margin-bottom $baseline*3
+						margin-bottom $baseline*2
+
+							@media $tablet
+								margin-bottom $baseline*5
 
 					h2
 						padding 0 40px
