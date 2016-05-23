@@ -6,6 +6,7 @@ header
     position relative
     width 100%
     height 100vh
+    margin-bottom 60px
     flexbox()
 
     .ace
@@ -41,8 +42,7 @@ header
 
     .mob
       display block
-      // position absolute
-      // top 75px
+
       width 100%
       text-align center
       margin-bottom $baseline*5
@@ -58,10 +58,12 @@ header
           margin-top -6px
 
     .intro
-      center-block()
       text-align center
       margin-top 100px
       width 100%
+
+      @media $phone
+        center-block()
 
       @media $tablet
         margin-top 220px
