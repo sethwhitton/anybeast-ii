@@ -56,6 +56,7 @@ $(document).ready(function(){
 
     $(window).on("scroll",function() {
       calculateValues();
+      framePadding();
       positionFrame();
     });
 
