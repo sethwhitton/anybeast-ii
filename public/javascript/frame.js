@@ -47,16 +47,16 @@ $(document).ready(function(){
       calculateValues();
       framePadding();
     });
-
-    $(window).on("resize",function() {
-      calculateValues();
-      framePadding();
-      positionFrame();
-    });
+    //
+    // $(window).on("resize",function() {
+    //   calculateValues();
+    //   framePadding();
+    //   positionFrame();
+    // });
 
     $(window).on("scroll",function() {
       calculateValues();
-      // framePadding();
+      framePadding();
       positionFrame();
     });
 
