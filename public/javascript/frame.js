@@ -20,6 +20,9 @@ $(document).ready(function(){
       clients_contents = $('.clients > div'),
       contact = $('#contact');
 
+
+// Frame and Transition Waypoints
+
   begin.waypoint({
     handler: function(direction) {
       if (direction == 'down') {
@@ -114,6 +117,9 @@ $(document).ready(function(){
     },
     offset: '75%'
   });
+
+
+// Modal Overlays
 
   modal1.click(function() {
     $('.box1').toggleClass('active','modal');
