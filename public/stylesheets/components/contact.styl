@@ -3,18 +3,24 @@
 
   & > main
     col(10,1)
-    padding-bottom $baseline*14
+    padding $baseline*10 0
     text-align center
 
     @media $desktop
       col(7,2.5)
+      padding-top $baseline*8
 
     .container
       background $gold
-      padding 75px 40px
+      padding 95px 40px
 
       @media $tablet
         padding 85px 75px 75px 75px
+
+      @media $desktop
+        padding 120px 75px 112px 75px
+        max-width 900px
+        margin 0 auto
 
       h2
         margin-bottom $baseline*3

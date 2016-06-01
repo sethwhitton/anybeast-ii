@@ -5,7 +5,7 @@ $(document).ready(function(){
   var begin = $('.frame-start'),
       frame = $('.frame-wrap'),
       border = $('.border'),
-      end = $('.shapes'),
+      end = $('.clients'),
 
       // Overlays
       modal1 = $('#broadside > .border'),
@@ -17,7 +17,8 @@ $(document).ready(function(){
       introduction_contents = $('.introduction > div'),
       how_we_work_contents = $('.how-we-work > div'),
       our_disciplines_contents = $('.our-disciplines > div'),
-      objects = $('#objects');
+      clients_contents = $('.clients > div'),
+      contact = $('#contact');
 
   begin.waypoint({
     handler: function(direction) {
@@ -42,7 +43,7 @@ $(document).ready(function(){
         frame.addClass('sticky');
       }
     },
-    offset: '55%'
+    offset: '0%'
   });
 
   introduction.waypoint({
@@ -87,17 +88,31 @@ $(document).ready(function(){
     offset: '75%'
   });
 
-
-  objects.waypoint({
+  clients_contents.waypoint({
     handler: function(direction) {
       if (direction == 'down') {
         our_disciplines_contents.removeClass('blur-out');
+        clients_contents.addClass('blur-out');
+        // introduction_contents.removeClass('blur-out');
       }
       else {
+        clients_contents.removeClass('blur-out');
         our_disciplines_contents.addClass('blur-out');
       }
     },
-    offset: '60%'
+    offset: '75%'
+  });
+
+  contact.waypoint({
+    handler: function(direction) {
+      if (direction == 'down') {
+        clients_contents.removeClass('blur-out');
+      }
+      else {
+        clients_contents.addClass('blur-out');
+      }
+    },
+    offset: '75%'
   });
 
   modal1.click(function() {
