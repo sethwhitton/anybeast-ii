@@ -42,7 +42,7 @@ $(document).ready(function(){
         frame.addClass('sticky');
       }
     },
-    offset: '50%'
+    offset: '55%'
   });
 
   introduction.waypoint({
@@ -84,7 +84,7 @@ $(document).ready(function(){
         how_we_work_contents.addClass('blur-out');
       }
     },
-    offset: '95%'
+    offset: '75%'
   });
 
 
