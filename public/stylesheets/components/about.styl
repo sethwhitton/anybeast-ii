@@ -3,6 +3,7 @@
 
 	& > main
 		position relative
+		width 100%
 
 		.frame-wrap
 			flexbox()
@@ -11,6 +12,10 @@
 			position absolute
 			right 0
 			left 0
+
+			@media $desktop_large
+				margin 0 auto
+				max-width 90em
 
 			& > div
 				center-block()
@@ -27,7 +32,6 @@
 					border-width 30px
 					height 80vh
 					width 100%
-
 
 		.sticky
 			position fixed
@@ -188,7 +192,7 @@
 									margin 0 30px 30px 0
 
 								@media $desktop
-									width 250px
+									max-width 250px
 									width 19%
 									margin 0 27px 0 0
 
@@ -201,7 +205,7 @@
 									margin 0 0 0 30px
 
 								@media $desktop
-									width 285px
+									max-width 285px
 									padding-bottom 50px
 									margin 0 25px 0 0
 									width 21%
@@ -215,6 +219,6 @@
 									margin 0 10px
 
 								@media $desktop
-									width 240px
+									max-width 240px
 									width 19%
 									margin 0 15px
