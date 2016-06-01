@@ -14,15 +14,15 @@ $(document).ready(function(){
 
       // Transitions
       introduction = $('.introduction'),
-      how_we_work = $('.how-we-work'),
-      our_disciplines = $('.our-disciplines');
-
+      introduction_contents = $('.introduction > div'),
+      how_we_work_contents = $('.how-we-work > div'),
+      our_disciplines_contents = $('.our-disciplines > div'),
+      objects = $('#objects');
 
   begin.waypoint({
     handler: function(direction) {
       if (direction == 'down') {
         frame.addClass('sticky');
-        // border.css({ 'height':frame.outerHeight() });
       }
       else {
         frame.removeClass('sticky');
@@ -44,21 +44,61 @@ $(document).ready(function(){
     },
     offset: '50%'
   });
-  //
-  // introduction.waypoint({
-  //   handler: function(direction) {
-  //     if (direction == 'down') {
-  //       frame.removeClass('sticky');
-  //       frame.addClass('end-sticky');
-  //     }
-  //     else {
-  //       frame.removeClass('end-sticky');
-  //       frame.addClass('sticky');
-  //     }
-  //   },
-  //   offset: '50%'
-  // });
 
+  introduction.waypoint({
+    handler: function(direction) {
+      if (direction == 'down') {
+        introduction_contents.addClass('blur-out');
+      }
+      else {
+        introduction_contents.removeClass('blur-out');
+      }
+    },
+    offset: '50%'
+  });
+
+  how_we_work_contents.waypoint({
+    handler: function(direction) {
+      if (direction == 'down') {
+        introduction_contents.removeClass('blur-out');
+        how_we_work_contents.addClass('blur-out');
+        // introduction_contents.removeClass('blur-out');
+      }
+      else {
+        how_we_work_contents.removeClass('blur-out');
+        introduction_contents.addClass('blur-out');
+      }
+    },
+    offset: '95%'
+  });
+
+  our_disciplines_contents.waypoint({
+    handler: function(direction) {
+      if (direction == 'down') {
+        how_we_work_contents.removeClass('blur-out');
+        our_disciplines_contents.addClass('blur-out');
+        // introduction_contents.removeClass('blur-out');
+      }
+      else {
+        our_disciplines_contents.removeClass('blur-out');
+        how_we_work_contents.addClass('blur-out');
+      }
+    },
+    offset: '95%'
+  });
+
+
+  objects.waypoint({
+    handler: function(direction) {
+      if (direction == 'down') {
+        our_disciplines_contents.removeClass('blur-out');
+      }
+      else {
+        our_disciplines_contents.addClass('blur-out');
+      }
+    },
+    offset: '60%'
+  });
 
   modal1.click(function() {
     $('.box1').toggleClass('active','modal');
