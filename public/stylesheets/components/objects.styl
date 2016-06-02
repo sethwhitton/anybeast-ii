@@ -1,25 +1,21 @@
 #objects
-	background-block()
+	@media $desktop
+		background-block()
 
 	main
-		col(12)
 		padding-bottom $baseline*8
 		text-align center
 		padding 0
+		margin 0 auto
 
 		@media $tablet
-			col(12)
 			padding-bottom $baseline*12
 
-		@media $desktop
-			col(12)
-
 		.object-holder
+			flexbox()
+			flex-flow()
 			content-block(center, flex-wrap)
 			margin 0
-
-			@media $tablet
-				margin 50px 50px 0 50px
 
 			.object
 				flexbox()
@@ -31,12 +27,13 @@
 				@media $tablet
 					width 100%
 					min-height 635px
+					margin 60px 0
 
 				@media $desktop
 					width 50%
+					margin 0
 
 				& > img
-					display inline-block
 					margin 0 auto
 
 				.button
