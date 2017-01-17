@@ -1,0 +1,53 @@
+#home-about
+  background-block()
+  background $black
+
+  
+  & > .content-block
+    padding 135px 0 120px 0
+    
+    h2
+      col(10,1)
+      font-size 56px
+      line-height 1.25em
+      margin-bottom 50px
+      z-index 2
+      position relative
+      
+      @media $tablet
+        col(7,1)
+        font-size 56px
+        padding 0 0 0 5px !important
+      
+      @media $desktop
+        font-size 56px
+
+    h3
+      col(10,1)
+      color $gold
+      text-transform uppercase
+      font-size 15px
+      margin-bottom 50px
+      z-index 2
+      // position relative
+            
+      @media $tablet
+        col(10,1)
+        font-size 15px
+
+      @media $desktop
+        font-size 15px
+        
+    .arrow-right
+      col(10,1)
+      flexbox()
+      justify-content(flex-start)
+
+      & > a
+        display block
+        min-width 28px
+        min-height 16px
+        background url('../images/arrow-head-right.svg')
+        background-repeat no-repeat
+        background-size contain
+        background-position center

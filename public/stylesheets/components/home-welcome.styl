@@ -1,0 +1,49 @@
+#home-welcome
+  background-block()
+  background $light-black
+  
+  & > .content-block
+
+    .headliner
+      col(10,1)
+      flexbox()
+      justify-content(center)
+      align-items(center)
+      min-height 40vh
+      background url('../images/clouds@2x.png')
+      background-repeat no-repeat
+      background-size contain
+      background-position center
+      
+      @media $tablet
+        min-height 65vh
+
+      @media $desktop
+        min-height 75vh
+      
+      h1
+        font-size 42px
+        line-height 1.15em
+        text-align center
+        
+        @media $tablet
+          col(10)
+          font-size 68px
+
+        @media $desktop
+          col(10)
+          font-size 84px
+
+    .arrow-down
+      col(12)
+      margin-bottom 80px
+
+      & > a
+        display block
+        min-width 66px
+        min-height 40px
+        background url('../images/arrow-head-down.svg')
+        background-repeat no-repeat
+        background-size contain
+        background-position center
+        
