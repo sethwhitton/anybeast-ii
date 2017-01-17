@@ -6,19 +6,16 @@
   box-sizing border-box
 
 // Grid settings
-$grid-max-width = 71.25em
+$grid-max-width = 100%
 $grid-gutter = 0.625em
 $grid-total-columns = 12
 
 $default-body-font-size = 16px
 
 // Responsive breakpoints
-
-$desktop_large = unquote("only screen and (min-width: 90em)")
 $desktop = unquote("only screen and (min-width: 60em)")
 $tablet = unquote("only screen and (min-width: 34em)")
 $phone = unquote("only screen and (max-width: 34em)")
-
 
 // Default margin
 $baseline = 8px
@@ -30,17 +27,9 @@ body
 // Responsive images
 img
   max-width 100%
-  // display block
+  display block
 
-// Image Flip
-flipit($around = 180deg)
-  -ms-transform: rotate($around)
-  -webkit-transform: rotate($around)
-  transform: rotate($around)
-
-// Flexbox grid
-// $full-bleed = 100%
-
+// Flexbox functions
 flexbox()
   display -webkit-box
   display -moz-box
@@ -63,11 +52,48 @@ align-items($align = flex-start)
   -ms-align-items $align
   align-items $align
 
-background-block($justify = flex-start, $align = flex-start)
-  flexbox()
-  flex-flow()
-  justify-content($justify)
-  align-items($align)
+flex($flex)
+  -webkit-box-flex $flex
+  -moz-box-flex $flex
+  -ms-flex $flex
+  -webkit-flex $flex
+  flex $flex
+
+// The columns mixin
+col($columns, $offset = 0)
+  flex(1 auto)
+  padding-left $grid-gutter*3
+  padding-right $grid-gutter*3
+
+  @media $tablet
+    flex(0 (($columns / $grid-total-columns) * 100)%)
+    padding-left $grid-gutter
+    padding-right $grid-gutter
+
+  @media $desktop
+    flex(0 (($columns / $grid-total-columns) * 100)%)
+    padding-left $grid-gutter
+    padding-right $grid-gutter
+
+  if $offset > 0
+    @media $tablet
+      margin-left ((($offset / $grid-total-columns) * 100)%)
+
+    @media $desktop
+      margin-left ((($offset / $grid-total-columns) * 100)%)
+
+  if $offset == 0
+    @media $phone
+      margin-left 0
+
+    @media $tablet
+      margin-left 0
+
+    @media $desktop
+      margin-left 0
+
+// Block elements
+background-block()
   width 100%
   margin 0 auto
 
@@ -79,54 +105,8 @@ content-block($justify = flex-start, $align = flex-start)
   max-width $grid-max-width
   margin 0 auto
 
-center-block($justify = center, $align = center)
-  flexbox()
-  justify-content($justify)
-  align-items($align)
-  flex-flow no-wrap
-
-flex($flex)
-  -webkit-box-flex $flex
-  -moz-box-flex $flex
-  -ms-flex $flex
-  -webkit-flex $flex
-  flex $flex
-
-// The columns mixin
-col($columns, $offset = 0)
-  flex(1 auto)
-  // padding-left $grid-gutter*3
-  // padding-right $grid-gutter*3
-
-  @media $tablet
-    flex(0 (($columns / $grid-total-columns) * 100)%)
-    // padding-left $grid-gutter
-    // padding-right $grid-gutter
-
-  @media $desktop
-    flex(0 (($columns / $grid-total-columns) * 100)%)
-    // padding-left $grid-gutter
-    // padding-right $grid-gutter
-
-  if $offset > 0
-    @media $phone
-      margin 0 ((($offset / $grid-total-columns) * 100)%) - 2.94117%
-
-    @media $tablet
-      margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
-
-    @media $desktop
-      margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
-
-  if $offset == 0
-    @media $phone
-      margin-left 0
-
-    @media $tablet
-      margin-left 0
-
-    @media $desktop
-      margin-left 0
+.background-block
+  background-block()
 
 .content-block
   content-block()
