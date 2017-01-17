@@ -5,14 +5,19 @@
 @import 'helpers/fonts'
 
 @import 'components/header'
+@import 'components/home'
 @import 'components/footer'
 
 
 html
-  background $black
+  background $light-black
   width 100%
 
 body
   font-family $font-family1
   font-weight $type-light
   color $white
+  
+  ::selection
+    color $white
+    background $black

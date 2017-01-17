@@ -1,0 +1,193 @@
+#home-welcome
+  background-block()
+  background $light-black
+  
+  & > .content-block
+
+    .headliner
+      col(10,1)
+      flexbox()
+      justify-content(center)
+      align-items(center)
+      min-height 75vh
+      background url('../images/clouds@2x.png')
+      background-repeat no-repeat
+      background-size contain
+      background-position center
+      
+      h1
+        col(10)
+        font-size 42px
+        line-height 1.15em
+        text-align center
+        
+        @media $tablet
+          col(10)
+          font-size 68px
+
+        @media $desktop
+          col(10)
+          font-size 84px
+
+    .arrow-down
+      col(12)
+      margin-bottom 80px
+
+      & > a
+        display block
+        min-width 66px
+        min-height 40px
+        background url('../images/arrow-head-down.svg')
+        background-repeat no-repeat
+        background-size contain
+        background-position center
+        
+        
+#home-about
+  background-block()
+  background $black
+  
+  & > .content-block
+    padding 135px 0 120px 0
+  
+    h2
+      col(12)
+      font-size 56px
+      line-height 1.25em
+      margin-bottom 50px
+      padding 0 0 0 5px !important
+      
+      
+      @media $tablet
+        col(6,1)
+        font-size 56px
+      
+      @media $desktop
+        font-size 56px
+
+    h3
+      col(12)
+      color $gold
+      text-transform uppercase
+      font-size 15px
+      margin-bottom 50px
+            
+      @media $tablet
+        col(10,1)
+        font-size 15px
+
+      @media $desktop
+        font-size 15px
+    
+    .arrow-right
+      col(10,1)
+      flexbox()
+      justify-content(flex-start)
+
+      & > a
+        display block
+        min-width 28px
+        min-height 16px
+        background url('../images/arrow-head-right.svg')
+        background-repeat no-repeat
+        background-size contain
+        background-position center
+        
+#home-work
+  background-block()
+  background $light-black
+  
+  & > .content-block
+      padding 135px 0 120px 0
+      position relative
+      background #171616
+      overflow hidden
+      
+      &:before
+        content ''
+        display block
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        width 100%
+        height 100%
+        background-image url(../images/photo.jpg)
+        background-size cover
+        opacity 0.06
+        z-index 1
+        // -webkit-filter blur(3px)
+        // filter blur(3px)            
+
+    h2
+      col(12)
+      font-size 56px
+      line-height 1.25em
+      margin-bottom 50px
+      padding 0 0 0 5px !important
+      z-index 2
+      position relative
+
+      
+      @media $tablet
+        col(6,1)
+        font-size 56px
+      
+      @media $desktop
+        font-size 56px
+
+    h3
+      col(12)
+      color $gold
+      text-transform uppercase
+      font-size 15px
+      margin-bottom 50px
+      z-index 2
+      position relative
+            
+      @media $tablet
+        col(10,1)
+        font-size 15px
+
+      @media $desktop
+        font-size 15px
+    
+    .arrow-right
+      col(10,1)
+      flexbox()
+      justify-content(flex-start)
+      position relative
+      z-index 2
+
+      & > a
+        display block
+        min-width 28px
+        min-height 16px
+        background url('../images/arrow-head-right.svg')
+        background-repeat no-repeat
+        background-size contain
+        background-position center
+        
+        
+    .redacted
+      background-image url(../images/redact.png)
+      // background-size contain
+      background-position center
+      background-repeat repeat-x
+      white-space nowrap
+      color $gold
+      line-height 2.25rem
+      // background $gold
+      margin 0
+      padding 0
+        
+      ::selection
+        color $white
+        background $black
+        
+.blur
+  -webkit-filter blur(1px)
+  filter blur(1px)            
+
+  
