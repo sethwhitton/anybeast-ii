@@ -1,0 +1,98 @@
+footer
+  background-block()
+  background $dark-black
+  
+  .core-footer
+    col(12)
+    margin 50px 0 40px 0
+    
+    @media $tablet
+      col(12)
+      margin 35px 0 50px 0
+
+    @media $desktop
+      col(10,1)
+      flexbox()
+      margin 50px 0 65px 0
+
+
+    .logo
+      col(12)
+      margin-bottom 25px
+
+      @media $desktop
+        col(2,0)
+        margin-right 30px
+        margin-bottom 0
+
+      & > a
+        display block
+        height 25px
+        min-width 150px
+        background-image url(../images/anybeast-logo@2x.png)
+        background-repeat no-repeat
+        background-position center
+        background-size contain
+      
+    .link-list
+      col(12)
+      text-align center
+      
+      @media $tablet
+        flexbox()
+        justify-content(center)
+
+
+      @media $desktop
+        flexbox()
+        justify-content(flex-start)
+        flex-grow 2
+        margin 0
+        
+        
+    .supplement
+      col(12)
+      flexbox()
+      justify-content(center)
+      
+      @media $tablet
+        justify-content(center)
+
+      @media $desktop
+        justify-content(flex-end)
+        margin 0
+
+      & > li
+        color $faint-grey
+        margin-right 30px
+      
+
+    li    
+      margin-bottom 15px
+      
+      &:last-child
+        margin-bottom 40px
+        margin-right 0 
+      
+      @media $tablet
+        margin-right 40px
+        padding-top 6px
+        margin-bottom 0
+        
+        &:last-child
+          margin-bottom 20px
+      
+      @media $desktop
+        
+        &:last-child
+          margin-bottom 0
+      
+    a
+      text-decoration none
+      color $faint-grey
+      
+    a:hover
+      color $white
+      
+    .copyright
+      display block
