@@ -4,24 +4,27 @@
   
   & > .content-block
 
-    .headliner
-      col(10,1)
-      flexbox()
-      justify-content(center)
-      align-items(center)
+    .clouds
       min-height 40vh
       background url('../images/clouds@2x.png')
       background-repeat no-repeat
-      background-size contain
+      background-size cover
       background-position center
-      
+      flexbox()
+      justify-content(center)
+      align-items(center)
+      margin-bottom 50px
+    
       @media $tablet
         min-height 65vh
+        background-size cover
 
       @media $desktop
         min-height 75vh
+        background-size contain
       
       h1
+        col(10,1)
         font-size 42px
         line-height 1.15em
         text-align center
