@@ -1,46 +1,44 @@
 #home-about
   background-block()
   background $black
-
   
   & > .content-block
     padding 135px 0 120px 0
-    
-    h2
+
+    & > div
       col(10,1)
-      font-size 56px
-      line-height 1.25em
-      margin-bottom 50px
-      z-index 2
-      position relative
-      transition all 0.5s ease
       
       @media $tablet
-        col(7,1)
-        font-size 56px
-        padding 0 0 0 5px !important
+        col(8,1)
       
-      @media $desktop
-        font-size 56px
+      h2
+        font-size 48px
+        line-height 1.25em
+        margin-bottom 50px
+        z-index 2
+        position relative
+        transition all 0.5s ease
+        
+        @media $tablet
+          font-size 48px
+        
+        @media $desktop
+          font-size 56px
 
-    h3
-      col(10,1)
-      color $gold
-      text-transform uppercase
-      font-size 15px
-      margin-bottom 50px
-      z-index 2
-      // position relative
-            
-      @media $tablet
-        col(10,1)
+      h3
+        color $gold
+        text-transform uppercase
         font-size 15px
+        margin-bottom 50px
+        z-index 2
+              
+        @media $tablet
+          font-size 15px
 
-      @media $desktop
-        font-size 15px
+        @media $desktop
+          font-size 15px
         
     .arrow-right
-      col(10,1)
       flexbox()
       justify-content(flex-start)
 

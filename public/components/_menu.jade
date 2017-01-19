@@ -1,16 +1,31 @@
-aside
+.overlay.normal-state
   .anybeast-logo
     a.blue.toggle-overlay
       span
-        
+  ul.sub-menu
+    li.line-down 
+      svg(height='30px' width='1px')
+        line(x1="0" y1="0" x2="0" y2="30" style="stroke:rgb(0,0,0);stroke-width:1")
+    li
+      a(href='/') Home
+    li
+      a(href='/about') About
+    li
+      a(href='/contact') Contact
+
+      
   nav
     ul
-      li
-        a(href='/') Home
+      //- li
+      //-   a(href='/') Home
       li
         a(href='#') Keurig
       li
-        a(href='/neo') Neo        
+        a#neo-mouse-over(href='/neo') Neo        
       li
-        a(href='#') Mociun        
-        
+        a(href='#') Mociun     
+      li
+        a.redacted(href='#') $z2!3x       
+      li
+        a(href='#') Time       
+  

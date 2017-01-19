@@ -5,7 +5,7 @@
   & > .content-block
 
     .clouds
-      min-height 40vh
+      min-height 55vh
       background url('../images/clouds@2x.png')
       background-repeat no-repeat
       background-size cover
@@ -14,7 +14,8 @@
       justify-content(center)
       align-items(center)
       margin-bottom 50px
-    
+      position relative
+
       @media $tablet
         min-height 65vh
         background-size cover
@@ -22,25 +23,25 @@
       @media $desktop
         min-height 75vh
         background-size contain
+        
+    .statement-contain
+      col(10)
       
       h1
-        col(10,1)
-        font-size 42px
+        font-size 54px
         line-height 1.15em
         text-align center
         transition all 0.5s ease
         
         @media $tablet
-          col(10)
           font-size 68px
 
         @media $desktop
-          col(10)
           font-size 84px
 
     .arrow-down
       col(12)
-      margin-bottom 80px
+      margin-bottom 40px
 
       & > a
         display block
