@@ -37,17 +37,22 @@ nav
       @media $tablet
         line-height 10vh
       
-      
-      & > a
+      a
         font-size 40px
         transition all 0.5s ease
         display background-block
         text-decoration none
         color $white
-        
+          
+        &:hover
+          transform scale(1.1)
+          
+          &:before
+            visibility visible
+            transform scaleX(1)
+            
         @media $tablet
-          font-size 60px
-        
+          font-size 60px        
 .outer-close
   position absolute
   right 0
