@@ -1,10 +1,10 @@
 #hero
   background-block()
   margin-bottom 125px
-  
+
   @media $tablet
     margin-bottom 200px
-  
+
 // // Radial gradient function
 // radial-gradient($gradient)
 //   background -webkit-radial-gradient($gradient)
@@ -16,44 +16,44 @@
 .neo-hero
     // background linear-gradient(#251D42, #6557A4)
     background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
-        
+
 .statement
   col(12)
   flexbox()
   align-items(center)
-  
+
   & > h1
     font-size 35px
     color $white
     text-align center
     padding 50px 0
     line-height 1.2
-    
+
     @media $tablet
       col(10,1)
       font-size 45px
       padding 70px 0 50px
-      
+
     @media $desktop
       col(8,2)
       font-size 60px
       padding 75px 0
-      
+
   & > h2
     font-size 25px
     text-align center
     line-height 1.4em
     padding-bottom 10px
-    
+
     @media $tablet
       col(10,1)
       font-size 40px
-      
+
     @media $desktop
       col(8,2)
       font-size 40px
       line-height 1.3em
-    
+
     &:after
       content ''
       display block
@@ -61,74 +61,78 @@
       max-width 200px
       height 1px
       margin 25px auto 75px auto
-      
+
       @media $tablet
         max-width 300px
         margin 50px auto 125px auto
-        
+
 .cross-image
   col(12)
   margin-bottom -50px
-  
+
   @media $tablet
     col(10,1)
-    margin-bottom -75px   
+    margin-bottom -75px
+    
+  @media $desktop
+    col(10,1)
+    margin-bottom -75px
 
 .full-column-image
   background-block()
-  
+
   .gallery
     @media $desktop
       col(10,1)
-    
+
     img
       margin 0 auto
-  
+
 .two-column-split
   background-block()
   flexbox()
   margin 75px 0
   padding 0 12px
-  
+
   @media $tablet
     margin-top 100px
-  
+
   @media $desktop
     margin 150px 0
-  
+
   .column-a
-    col(12) 
+    col(12)
     flexbox()
     align-items(center)
 
     @media $tablet
       col(10,1)
-      
+
     @media $desktop
       col(4,2)
       flex-wrap wrap
       height 100%
-    
+
     & > .wrapper
       min-height 200px
-    
+
       & > div
-        
+
         @media $desktop
           padding 0 10% 0 0
-        
+
         h4
           font-size 14px
           text-transform uppercase
           color $gold
           letter-spacing 1px
           margin-bottom 15px
-        
+
         h3
           font-size 26px
           color $white
           margin-bottom 15px
-          
+
         p
           color $silver
           font-size 18px
@@ -139,7 +143,7 @@
 
   .column-b
     display none
-    
+
     @media $tablet
       col(10,1)
       margin 100px auto
@@ -148,78 +152,78 @@
     @media $desktop
       col(4)
       margin 0
-      
+
     img
       max-width 300px
       margin 0 auto
-      
+
       @media $tablet
         max-width 500px
-        
+
       @media $desktop
         width 100%
-    // 
-    
+    //
+
 .multi-image
   background-block()
   margin 75px 0
-  
+
   @media $tablet
     margin 100px 0
-  
+
   @media $desktop
     margin 150px 0
-  
+
   & > .content-block
-    
+
     .gallery
       col(12)
-            
+
       @media $tablet
         flexbox()
         col(10,1)
-      
+
       @media $desktop
         col(8,2)
-      
+
       .large
         margin-bottom 20px
-        
+
         @media $tablet
           col(6)
           margin-bottom none
 
       .small
         @media $tablet
-          col(6)        
-        
+          col(6)
+
         @media $tablet
           margin-top 140px
-        
+
         @media $desktop
           margin-top 20%
 
         & > img:first-child
           margin-bottom 20px
-          
+
 .full-bleed
   background-block()
   background linear-gradient(#251D42, #463B73)
-      
+
   img
     margin 0 auto
-      
+
 .end-statement
   col(12)
   flexbox()
   align-items(center)
-  
+
   & > h2
     font-size 25px
     text-align center
     line-height 1.4em
-    margin-bottom 150px
-    
+    margin-bottom 75px
+
     @media $tablet
       col(10,1)
       font-size 40px
@@ -232,7 +236,26 @@
       max-width 200px
       height 1px
       margin 75px auto 25px auto
-      
+
       @media $tablet
         max-width 300px
         margin 125px auto 50px auto
+
+.caption
+  background $light-black
+  color $faint-grey
+  padding 15px 20px 20px
+  
+  @media $desktop
+    padding 15px 20px 20px
+    max-width 1200px
+    margin 10px auto 0
+    
+  & > p
+    color $faint-grey
+
+    
+    & > .bold
+      font-weight bold
+      color $white
+

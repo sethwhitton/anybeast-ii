@@ -58,6 +58,14 @@ flex($flex)
   -ms-flex $flex
   -webkit-flex $flex
   flex $flex
+  
+rotator($rotation = 180deg)
+  -webkit-transform rotate($rotation)
+  -moz-transform rotate($rotation)
+  -o-transform rotate($rotation)
+  -ms-transform rotate($rotation)     
+  transform rotate($rotation)      
+  
 
 // The columns mixin
 col($columns, $offset = 0)
@@ -110,3 +118,4 @@ content-block($justify = flex-start, $align = flex-start)
 
 .content-block
   content-block()
+  

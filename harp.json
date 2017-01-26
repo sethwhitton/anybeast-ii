@@ -1,7 +1,16 @@
 {
   "globals": {
-    "title": "ANYBEAST – Digital design & strategy SWAT team, NYC",
-    "name"  : "ANYBEAST",
-    "uri": "http://anybeast.com"
+    "title": "Anybeast – Digital design & strategy SWAT team, NYC",
+    "name"  : "Anybeast",
+    "uri": "http://anybeast.com",
+
+    "neo_url": "/neo",
+    "keurig_url": "/keurig",
+    "mociun_url": "/mociun",
+    "time_url": "/time",
+    "auto_url": "/auto",    
+
+    "neo_next_img": "../images/neo/H@2x.png"
+
   }
 }

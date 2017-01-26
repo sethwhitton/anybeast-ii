@@ -1,0 +1,23 @@
+#next_project
+  margin 50px 0
+  flexbox()
+  justify-content(center)
+  flex-wrap wrap
+  
+  @media $desktop
+    flex-wrap nowrap
+  
+  .project
+    
+    @media $tablet
+      col(6)
+  
+    @media $desktop
+      col(5)
+      max-width 600px
+      
+  .fall-off
+    display none
+    
+    @media $tablet
+      display block
