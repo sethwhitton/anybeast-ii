@@ -4,16 +4,14 @@
   & > .content-block
 
     .object-wide
-      col(10,1)
+      col(12)
       margin-bottom 75px
+      
+      @media $desktop
+        col(10,1)
       
       .neo-static
         position relative
-        background url('../images/object_neo_home@2x.png')
-        background-size contain
-        min-height 636px
-        min-width 1220px
-        display block
     
     .columns
       flexbox()
