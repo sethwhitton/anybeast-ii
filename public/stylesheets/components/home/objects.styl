@@ -1,0 +1,145 @@
+#objects
+  background-block()
+
+  & > .content-block
+
+    .object-wide
+      col(10,1)
+      margin-bottom 75px
+      
+      .neo-static
+        position relative
+        background url('../images/object_neo_home@2x.png')
+        background-size contain
+        min-height 636px
+        min-width 1220px
+        display block
+    
+    .columns
+      flexbox()
+      width 1064px
+      height 1748px
+      margin 0 auto
+      flex-wrap wrap
+      justify-content flex-start
+      align-items flex-start
+      flex-direction column
+  
+      .object-tall
+        width 491px
+  
+        .mociun-static
+          position relative
+          background url('../images/mociun_model@2x.png')
+          background-size cover
+          background-position center
+          display block
+          height 874px
+        
+        .broadside
+          flexbox()
+          justify-content(center)
+          align-items(center)
+          height 729px
+          margin-bottom 75px
+          
+          
+          & > div
+            background-color $black
+            border 7px solid $silver
+            color $white
+            font-size 14px
+            text-transform uppercase
+            letter-spacing 1px
+            text-align center
+            width 290px
+            
+            ul
+              display block
+              padding 50px 55px
+              
+              li
+                margin 25px 0
+
+                &:first-child
+                  color $silver
+                  margin-bottom 25px
+                  margin-top 5px
+                  
+                  
+              .arrow-butt-down
+                display block
+                height 40px
+                width 15px
+                background url('../images/icn_arrow-end@2x.png')
+                background-repeat no-repeat
+                background-size contain
+                background-position center
+                margin 0 auto
+                
+              .arrow-head-down
+                display block
+                height 40px
+                width 15px
+                background url('../images/icn_arrow-head@2x.png')
+                background-repeat no-repeat
+                background-size contain
+                background-position center
+                margin 0 auto
+
+        .testimonial
+          flexbox()
+          justify-content(center)
+          align-items(center)
+          height 729px
+          margin-top 40px
+          
+
+          & > div
+            background-color $black
+            border 7px solid $silver
+            color $silver
+            font-size 14px
+            text-transform uppercase
+            letter-spacing 1px
+            text-align center
+            width 362px
+
+            
+            ul
+              display block
+              padding 60px 45px
+              
+              li
+                margin 10px 0
+                
+                &:nth-child(2)
+                  font-size 24px
+                  text-transform none
+                  color $white
+                  line-height 1.5em
+                  margin 35px 0
+                  letter-spacing 0
+
+  .border
+    position absolute
+    top 10px
+    left 10px
+    right 10px
+    bottom 10px
+    border 1px solid $silver
+
+  .captioned
+    text-transform uppercase
+    margin-top 20px
+    text-align center
+    font-size 14px
+    letter-spacing 1px
+    
+    p
+      display inline-block
+      margin-right 15px
+      color $silver
+      
+      & > a
+        color $white
