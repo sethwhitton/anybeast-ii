@@ -1,18 +1,29 @@
 #home-welcome
   background-block()
-  background $light-black
   
-  .clouds
-    min-height 55vh
-    background url('../images/clouds@2x.png')
-    background-repeat no-repeat
-    background-size cover
-    background-position center
+  & > div
     flexbox()
     align-items(center)
     justify-content(center)
     margin-bottom 50px
     position relative
+    min-height 55vh
+
+    @media $tablet
+      min-height 65vh
+      
+    @media $desktop
+      min-height 75vh
+  
+  .clouds
+    background url('../images/clouds@2x.png')
+    background-repeat no-repeat
+    background-size cover
+    background-position center
+    position fixed
+    width 100%
+    min-height 55vh
+    z-index -1
 
     @media $tablet
       min-height 65vh
@@ -22,31 +33,30 @@
       min-height 75vh
       background-size contain
       
-    .statement-contain
-      col(10,1)
+  .statement-contain
+    col(10,1)
+    @media $tablet
+      col(9)
+    @media $desktop
+      col(8)
+
+    & > p
+      color $gold
+      font-size 13px
+      text-align center
+      margin-top 50px
+    
+    h1
+      font-size 42px
+      line-height 1.15em
+      text-align center
+      transition all 0.5s ease
       
       @media $tablet
-        col(9)
+        font-size 68px
+
       @media $desktop
-        col(8)
-
-      & > p
-        color $gold
-        font-size 13px
-        text-align center
-        margin-top 50px
-      
-      h1
-        font-size 42px
-        line-height 1.15em
-        text-align center
-        transition all 0.5s ease
-        
-        @media $tablet
-          font-size 68px
-
-        @media $desktop
-          font-size 78px
+        font-size 78px
 
     .arrow-down
       col(12)

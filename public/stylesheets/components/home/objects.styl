@@ -4,46 +4,78 @@
   & > .content-block
 
     .object-wide
-      col(12)
-      margin-bottom 75px
+      max-width 95%
+      margin 0 auto 75px auto   
       
       @media $desktop
-        col(10,1)
+        width 90%
+        max-width 1440px
       
       .neo-static
-        position relative
+        & > div
+          position relative
     
-    .columns
+    #columns     
       flexbox()
-      width 1064px
-      height 1748px
-      margin 0 auto
+      width 100%
       flex-wrap wrap
-      justify-content flex-start
-      align-items flex-start
-      flex-direction column
+      flex-direction row
+      
+      @media $tablet 
+        margin 0 auto
+        flex-wrap wrap
+        justify-content flex-start
+        align-items flex-start
+        flex-direction column
+
+      @media $desktop
+        height 1982px
+        max-width 1220px
+        padding 0 5%
   
       .object-tall
-        width 491px
-  
-        .mociun-static
-          position relative
-          background url('../images/mociun_model@2x.png')
-          background-size cover
-          background-position center
-          display block
-          height 874px
+        width 80%
+        margin 0 auto
         
+        @media $tablet
+          width 60%
+          
+        @media $desktop
+          width 46%
+          margin 0 2%
+  
+        // Re-order of content for tablet/mobile stacking
+        &:nth-child(1)
+          order 1
+          
+        &:nth-child(2)
+          order 4      
+          @media $desktop
+            order 2
+
+        &:nth-child(3)
+          order 2
+          @media $desktop
+            order 3
+
+        &:nth-child(4)
+          order 3
+          @media $desktop
+            order 4
+  
+        .mociun-static, .keurig-static
+          & > div
+            position relative
+  
         .broadside
           flexbox()
           justify-content(center)
           align-items(center)
           height 729px
-          margin-bottom 75px
-          
-          
+          margin-bottom 50px
+                    
           & > div
-            background-color $black
+            background-color $light-black
             border 7px solid $silver
             color $white
             font-size 14px
@@ -63,7 +95,6 @@
                   color $silver
                   margin-bottom 25px
                   margin-top 5px
-                  
                   
               .arrow-butt-down
                 display block
@@ -90,19 +121,17 @@
           justify-content(center)
           align-items(center)
           height 729px
-          margin-top 40px
+          // margin-top 40px
           
-
           & > div
-            background-color $black
+            background-color $light-black
             border 7px solid $silver
             color $silver
             font-size 14px
             text-transform uppercase
             letter-spacing 1px
             text-align center
-            width 362px
-
+            width 320px
             
             ul
               display block
@@ -112,11 +141,11 @@
                 margin 10px 0
                 
                 &:nth-child(2)
-                  font-size 24px
+                  font-size 20px
                   text-transform none
                   color $white
                   line-height 1.5em
-                  margin 35px 0
+                  margin 42px 0
                   letter-spacing 0
 
   .border
@@ -126,6 +155,7 @@
     right 10px
     bottom 10px
     border 1px solid $silver
+    z-index 2
 
   .captioned
     text-transform uppercase
