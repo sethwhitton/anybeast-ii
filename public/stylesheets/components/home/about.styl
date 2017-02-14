@@ -1,56 +1,50 @@
 #home-about
-  background-block()
-  background $black
   
-  & > .content-block
-    padding 135px 0 120px 0
+  .frame
+    position relative
+    height 100px
+    max-width 80%
+    min-height 630px
+    margin 0 auto 75px auto
 
-    & > div
-      col(10,1)
-      display block
-      
-      @media $tablet
-        col(8,1)
-        
-      @media $desktop
-        col(7,1)
+    .border
+    	display block
+  		border-image url(../images/frame.border-image.png) 54 52 52 53 round round
+  		border-style inset
+  		border-color $gold
+  		border-width 30px
+  		height 100%
+  		width 100%
+
     
-      h2
-        font-size 48px
-        line-height 1.25em
-        margin-bottom 50px
-        z-index 2
-        position relative
-        transition all 0.5s ease
-        
-        @media $tablet
-          font-size 48px
-        
-        @media $desktop
-          font-size 56px
+    .main-gallery
 
-      h3
-        color $gold
-        text-transform uppercase
-        font-size 15px
-        margin-bottom 50px
-        z-index 2
-              
-        @media $tablet
-          font-size 15px
+      .gallery-cell
+        flexbox()
+        justify-content(center)
+        align-items(center)
+        width 100%
+        text-align center
 
         @media $desktop
-          font-size 15px
-        
-    .arrow-right
-      flexbox()
-      justify-content(flex-start)
+          min-height 630px
 
-      & > a
-        display block
-        min-width 28px
-        min-height 16px
-        background url('../images/arrow-head-right.svg')
-        background-repeat no-repeat
-        background-size contain
-        background-position center
+        h2
+          font-size 14px
+          color $gold
+          letter-spacing 1px
+          text-transform uppercase
+          display block
+
+        h1
+          font-size 55px
+          line-height 1.2em
+          color $white
+          max-width 90%
+          display block
+          margin 45px auto
+
+      // .no-1
+        
+
+          
