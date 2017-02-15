@@ -1,21 +1,33 @@
-#work
-  background-block()
-
-.anybeast-logo
-  width 57px
-  height 50px
-  margin 40px auto 32px 
+nav.global-nav
+  
+  ul
+    flexbox()
+    justify-content(center)
+    width 50%
+    margin 75px auto 125px auto
+    
+    li
+      margin 0 5%
+      text-transform uppercase
+      font-size 13px
+      letter-spacing 1.5px
+        
+      @media $tablet
+        margin 0 3%
       
-  & > a
-    display block
-    width 57px
-    height 50px
-    padding 20px
-    background-image url(../images/anybeast_icon@2x.png)
-    background-repeat no-repeat
-    background-position center
-    background-size contain
-    cursor pointer
+      
+      a
+        text-decoration none
+        color $silver
+        transition all 0.5s ease
+        
+        &:active
+          cursor pointer
+        
+        &:hover
+          transform scale(1.1)
+          color $white
+
 
 .arrow-back
   display inline-block

@@ -1,0 +1,56 @@
+#home-services
+  flexbox()
+  align-items(center)
+  height 100vh
+  
+  & > div
+    col(12)
+    
+    @media $tablet
+      col(10,1)
+
+    @media $desktop
+      col(8,2)
+
+    h2
+      text-align center
+      text-transform uppercase
+      color $gold
+      font-size 14px
+      margin-bottom 25px
+      letter-spacing 1px
+      
+      @media $tablet
+        text-align left
+    
+    ul
+      flexbox()
+      flex-wrap wrap
+      margin-left -40px
+      margin-bottom -15px
+              
+      li
+        font-size 34px
+        box-sizing border-box
+        margin-bottom 25px
+        margin-left 40px
+        flex-basis 100%
+        text-align center
+        white-space nowrap
+        
+        @media $tablet
+          flex-grow 1
+          flex-shrink 0
+          flex-basis 400px
+          text-align left
+          
+        @media $desktop
+          font-size 48px
+          line-height 61px
+          
+        a
+          color $white
+          text-decoration none
+          border-bottom 1px solid $gold
+          line-height 10px
+      

@@ -5,9 +5,14 @@
   -moz-box-sizing border-box
   box-sizing border-box
 
-// Grid settings
-$grid-max-width = 100%
-$grid-gutter = 0.625em
+// Old grid settings
+// $grid-max-width = 100%
+// $grid-gutter = 0.625em
+// $grid-total-columns = 12
+
+// New grid settings
+$grid-max-width = 84.722222222%
+$grid-gutter = 2.083333333%
 $grid-total-columns = 12
 
 $default-body-font-size = 16px
@@ -105,11 +110,11 @@ background-block()
   width 100%
   margin 0 auto
 
-content-block($justify = flex-start, $align = flex-start)
+content-block($justify = flex-start, $flow = flex-start, $align = flex-start)
   flexbox()
-  flex-flow($align)
   justify-content($justify)
-  align-items()
+  flex-flow($flow)
+  align-items($align)
   max-width $grid-max-width
   margin 0 auto
 
