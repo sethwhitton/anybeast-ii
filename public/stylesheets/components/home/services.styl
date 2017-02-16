@@ -5,49 +5,72 @@
     content-block(flex-start, flex-start, center)
     height 100vh
     
-    div 
+    .frame 
       col(12)
+      position relative
+      height 1px
+      max-width 100%
+      min-height 800px
+      margin 0 auto 75px auto
       
-      @media $desktop
-        col(10,1)
+      @media $tablet
+        min-height 720px
       
-      h2
-        text-align center
-        text-transform uppercase
-        color $gold
-        font-size 14px
-        margin-bottom 25px
-        letter-spacing 1px
-        
-        @media $desktop
-          text-align left
-      
-      ul
+      .border
+        display block
+        border-image url(../images/frame.border-image.png) 54 52 52 53 round round
+        border-style inset
+        border-color $gold
+        border-width 30px
+        height 100%
+        width 100%
         flexbox()
-        flex-direction column
-        flex-wrap wrap
-        max-height 600px
-        max-width 800px
+        align-items(center)
         
-        @media $desktop
-          max-height 300px  
-              
-        li
-          font-size 34px
-          margin 15px 0
-          text-align center
-          white-space nowrap
-          display block
-            
-          @media $desktop
-            text-align left
-            width 380px
-            font-size 40px
-            
-            
-          a
-            color $white
-            text-decoration none
-            border-bottom 1px solid $gold
-            line-height 10px
+        & > div
+          col(10,1)
+          margin-bottom 25px
+          
+          @media $tablet
+            margin 75px auto
+          
         
+          h2
+            text-align center
+            text-transform uppercase
+            color $gold
+            font-size 14px
+            margin-bottom 25px
+            letter-spacing 1px
+            
+            @media $desktop
+              text-align left
+          
+          ul
+            flexbox()
+            flex-direction column
+            flex-wrap wrap
+            max-height 00px
+            max-width 800px
+            
+            @media $desktop
+              max-height 400px  
+                  
+            li
+              font-size 34px
+              margin 15px 0
+              text-align center
+              white-space nowrap
+              display block
+                
+              @media $desktop
+                text-align left
+                col(5)
+                font-size 40px
+                
+              a
+                color $white
+                text-decoration none
+                border-bottom 1px solid $gold
+                line-height 10px
+            

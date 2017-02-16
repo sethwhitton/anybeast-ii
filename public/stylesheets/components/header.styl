@@ -27,19 +27,54 @@ nav.global-nav
           transform scale(1.1)
           color $white
 
+.anybeast-logo
+  width 100%
+  height 55px
+  margin 0 auto 125px auto
+  position relative
+  display block
+  text-align center
+
+  &:after 
+    content 'ANYBEAST'
+    font-size 12px
+    letter-spacing 2px
+    color $silver
+    text-transform uppercase
+    text-decoration none
+    position absolute
+    bottom -26px
+    margin-left -36px
+          
+  & > a
+    display block
+    width 63px
+    height 55px
+    padding 20px
+    margin 0 auto
+    background-image url(../images/anybeast_icon@2x.png)
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    cursor pointer    
+
+.case-study-header
+  margin 55px auto 75px auto
 
 .arrow-back
-  display inline-block
+  display block
   position absolute
-  margin-left 33px  
-  padding 16px 27px 27px 27px
-  min-width 28px
-  min-height 16px
+  margin-left 65px  
+  min-width 75px
+  min-height 75px
   background url('../images/arrow-head-right.svg')
   background-repeat no-repeat
   // background-size contain
   background-position center
   rotator()
+  
+  &:hover
+    cursor pointer
   
 .balancer
     display inline-block

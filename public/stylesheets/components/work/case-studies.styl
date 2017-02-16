@@ -1,3 +1,10 @@
+// Individual hero treatments
+.neo-hero
+  background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
+
+.core-statement, .full-column-image, .two-column-split, .multi-image, .end-statement
+  content-block()
+    
 #hero
   background-block()
   margin-bottom 125px
@@ -5,45 +12,42 @@
   @media $tablet
     margin-bottom 200px
 
-// // Radial gradient function
-// radial-gradient($gradient)
-//   background -webkit-radial-gradient($gradient)
-//   background -o-radial-gradient($gradient)
-//   background -moz-radial-gradient($gradient)
-//   background radial-gradient($gradient)
-
-
-.neo-hero
-    // background linear-gradient(#251D42, #6557A4)
-    background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
-
-.statement
-  col(12)
-  flexbox()
-  align-items(center)
-
-  & > h1
-    font-size 35px
-    color $white
+  .container
     text-align center
-    padding 50px 0
-    line-height 1.2
+    content-block()
 
-    @media $tablet
-      col(10,1)
-      font-size 45px
-      padding 70px 0 50px
-
-    @media $desktop
+    h1
       col(8,2)
-      font-size 60px
-      padding 75px 0
+      font-size 35px
+      color $white
+      padding 50px 0
+      line-height 1.2
 
-  & > h2
+      @media $tablet
+        font-size 45px
+        padding 70px 0 50px
+
+      @media $desktop
+        font-size 60px
+        padding 80px 0 65px
+
+     .hero-image
+      @media $tablet
+       col(12)
+       margin-bottom -75px
+              
+      @media $desktop
+       col(10,1)
+       margin-bottom -125px
+
+.core-statement    
+  h2
+    col(12)
     font-size 25px
     text-align center
     line-height 1.4em
-    padding-bottom 10px
+    padding 40px 0 10px
+    
 
     @media $tablet
       col(10,1)
@@ -66,33 +70,13 @@
         max-width 300px
         margin 50px auto 125px auto
 
-.cross-image
-  col(12)
-  margin-bottom -50px
-
-  @media $tablet
-    col(10,1)
-    margin-bottom -75px
-    
+.gallery
   @media $desktop
-    col(10,1)
-    margin-bottom -75px
-
-.full-column-image
-  background-block()
-
-  .gallery
-    @media $desktop
-      col(10,1)
-
-    img
-      margin 0 auto
-
+    col(12)
+    
 .two-column-split
-  background-block()
-  flexbox()
+  content-block(flex-start, flex-start, center)
   margin 75px 0
-  padding 0 12px
 
   @media $tablet
     margin-top 100px
@@ -102,14 +86,12 @@
 
   .column-a
     col(12)
-    flexbox()
-    align-items(center)
 
     @media $tablet
-      col(10,1)
+      col(10,2)
 
     @media $desktop
-      col(4,2)
+      col(5,2)
       flex-wrap wrap
       height 100%
 
@@ -137,21 +119,19 @@
           color $silver
           font-size 18px
           line-height 1.7em
+          
+          @media $desktop
+            max-width 390px
 
       & > div:first-child
         margin-bottom 50px
 
   .column-b
     display none
-
-    @media $tablet
-      col(10,1)
-      margin 100px auto
-      display block
-
+    
     @media $desktop
-      col(4)
-      margin 0
+      col(5)
+      display block
 
     img
       max-width 300px
@@ -162,10 +142,8 @@
 
       @media $desktop
         width 100%
-    //
 
 .multi-image
-  background-block()
   margin 75px 0
 
   @media $tablet
@@ -173,38 +151,36 @@
 
   @media $desktop
     margin 150px 0
+    
+  .gallery
+    col(12)
 
-  & > .content-block
+    @media $tablet
+      flexbox()
+      col(10,2)
 
-    .gallery
-      col(12)
+    @media $desktop
+      col(10,2)
+
+    .large
+      margin-bottom 20px
 
       @media $tablet
-        flexbox()
-        col(10,1)
+        col(6)
+        margin-bottom none
+
+    .small
+      @media $tablet
+        col(6)
+
+      @media $tablet
+        margin-top 140px
 
       @media $desktop
-        col(8,2)
+        margin-top 20%
 
-      .large
+      & > img:first-child
         margin-bottom 20px
-
-        @media $tablet
-          col(6)
-          margin-bottom none
-
-      .small
-        @media $tablet
-          col(6)
-
-        @media $tablet
-          margin-top 140px
-
-        @media $desktop
-          margin-top 20%
-
-        & > img:first-child
-          margin-bottom 20px
 
 .full-bleed
   background-block()
@@ -214,11 +190,8 @@
     margin 0 auto
 
 .end-statement
-  col(12)
-  flexbox()
-  align-items(center)
-
-  & > h2
+  h2
+    col(12)
     font-size 25px
     text-align center
     line-height 1.4em
@@ -228,6 +201,9 @@
       col(10,1)
       font-size 40px
       line-height 1.3em
+        
+    @media $desktop
+      col(8,2)
 
     &:before
       content ''
