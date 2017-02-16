@@ -2,48 +2,32 @@
   background-block()
 
   & > .content-block
+    content-block(flex-start, flex-start, center)
 
     .object-wide
-      max-width 95%
-      margin 0 auto 75px auto   
-      
-      @media $desktop
-        width 90%
-        max-width 1440px
-      
+      col(12)
+      margin-bottom 75px  
+            
       .neo-static
         & > div
           position relative
     
-    #columns     
-      flexbox()
-      width 100%
+    .columns     
+      col(10,1)
+      content-block(flex-start, flex-start, center)
       flex-wrap wrap
       flex-direction row
       
-      @media $tablet 
-        margin 0 auto
-        flex-wrap wrap
-        justify-content flex-start
-        align-items flex-start
-        flex-direction column
-
-      @media $desktop
-        height 1800px
-        max-width 1220px
-        padding 0 5%
-  
       .object-tall
-        width 80%
-        margin 0 auto
+        col(12)
+        margin-bottom 50px
         
         @media $tablet
-          width 60%
+          col(10,1)
           
         @media $desktop
-          width 46%
-          margin 0 2%
-  
+          col(6)
+
         // Re-order of content for tablet/mobile stacking
         &:nth-child(1)
           order 1
@@ -51,12 +35,12 @@
         &:nth-child(2)
           order 4      
           @media $desktop
-            order 2
+            order 3
 
         &:nth-child(3)
           order 2
           @media $desktop
-            order 3
+            order 2
 
         &:nth-child(4)
           order 3
@@ -67,85 +51,81 @@
           & > div
             position relative
   
-        .broadside
-          flexbox()
-          justify-content(center)
-          align-items(center)
-          height 729px
-          margin-bottom 50px
-                    
-          & > div
-            background-color $black
-            border 7px solid $silver
-            color $white
-            font-size 14px
-            text-transform uppercase
-            letter-spacing 1px
-            text-align center
-            width 290px
-            
-            ul
-              display block
-              padding 50px 55px
-              
-              li
-                margin 25px 0
-
-                &:first-child
-                  color $silver
-                  margin-bottom 25px
-                  margin-top 5px
+      .broadside
+        flexbox()
+        justify-content(center)
+        align-items(center)
                   
-              .arrow-butt-down
-                display block
-                height 40px
-                width 15px
-                background url('../images/icn_arrow-end@2x.png')
-                background-repeat no-repeat
-                background-size contain
-                background-position center
-                margin 0 auto
-                
-              .arrow-head-down
-                display block
-                height 40px
-                width 15px
-                background url('../images/icn_arrow-head@2x.png')
-                background-repeat no-repeat
-                background-size contain
-                background-position center
-                margin 0 auto
-
-        .testimonial
-          flexbox()
-          justify-content(center)
-          align-items(center)
-          height 729px
-          
-          & > div
-            background-color $black
-            border 7px solid $silver
-            color $silver
-            font-size 14px
-            text-transform uppercase
-            letter-spacing 1px
-            text-align center
-            width 320px
+        & > div
+          border 7px solid $silver
+          background-color $black
+          color $white
+          text-align center
+          font-size 14px
+          text-transform uppercase
+          letter-spacing 1px
+                      
+          ul
+            display block
+            padding 50px 40px
             
-            ul
-              display block
-              padding 60px 45px
-              
-              li
-                margin 10px 0
+            li
+              margin 25px 0
+
+              &:first-child
+                color $silver
+                margin-bottom 25px
+                margin-top 5px
                 
-                &:nth-child(2)
-                  font-size 20px
-                  text-transform none
-                  color $white
-                  line-height 1.5em
-                  margin 42px 0
-                  letter-spacing 0
+            .arrow-butt-down
+              display block
+              height 40px
+              width 15px
+              background url('../images/icn_arrow-end@2x.png')
+              background-repeat no-repeat
+              background-size contain
+              background-position center
+              margin 0 auto
+              
+            .arrow-head-down
+              display block
+              height 40px
+              width 15px
+              background url('../images/icn_arrow-head@2x.png')
+              background-repeat no-repeat
+              background-size contain
+              background-position center
+              margin 0 auto
+
+      .testimonial
+        flexbox()
+        justify-content(center)
+        align-items(center)
+        
+        & > div
+          border 7px solid $silver
+          background-color $black
+          color $silver
+          font-size 14px
+          text-transform uppercase
+          letter-spacing 1px
+          text-align center
+          max-width 300px
+          
+          ul
+            display block
+            padding 60px 40px
+            
+            li
+              margin 10px 0
+              
+              &:nth-child(2)
+                font-size 20px
+                text-transform none
+                color $white
+                line-height 1.5em
+                margin 42px 0
+                letter-spacing 0
 
   .border
     position absolute

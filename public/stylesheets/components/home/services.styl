@@ -1,56 +1,53 @@
 #home-services
-  flexbox()
-  align-items(center)
-  height 100vh
+  background-block()
   
-  & > div
-    col(12)
+  & > .content-block
+    content-block(flex-start, flex-start, center)
+    height 100vh
     
-    @media $tablet
-      col(10,1)
-
-    @media $desktop
-      col(8,2)
-
-    h2
-      text-align center
-      text-transform uppercase
-      color $gold
-      font-size 14px
-      margin-bottom 25px
-      letter-spacing 1px
+    div 
+      col(12)
       
-      @media $tablet
-        text-align left
-    
-    ul
-      flexbox()
-      flex-wrap wrap
-      margin-left -40px
-      margin-bottom -15px
-              
-      li
-        font-size 34px
-        box-sizing border-box
-        margin-bottom 25px
-        margin-left 40px
-        flex-basis 100%
+      @media $desktop
+        col(10,1)
+      
+      h2
         text-align center
-        white-space nowrap
+        text-transform uppercase
+        color $gold
+        font-size 14px
+        margin-bottom 25px
+        letter-spacing 1px
         
-        @media $tablet
-          flex-grow 1
-          flex-shrink 0
-          flex-basis 400px
-          text-align left
-          
         @media $desktop
-          font-size 48px
-          line-height 61px
-          
-        a
-          color $white
-          text-decoration none
-          border-bottom 1px solid $gold
-          line-height 10px
+          text-align left
       
+      ul
+        flexbox()
+        flex-direction column
+        flex-wrap wrap
+        max-height 600px
+        max-width 800px
+        
+        @media $desktop
+          max-height 300px  
+              
+        li
+          font-size 34px
+          margin 15px 0
+          text-align center
+          white-space nowrap
+          display block
+            
+          @media $desktop
+            text-align left
+            width 380px
+            font-size 40px
+            
+            
+          a
+            color $white
+            text-decoration none
+            border-bottom 1px solid $gold
+            line-height 10px
+        
