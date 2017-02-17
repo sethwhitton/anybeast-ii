@@ -7,7 +7,7 @@
     
 #hero
   background-block()
-  margin-bottom 125px
+  margin-bottom 75px
 
   @media $tablet
     margin-bottom 200px
@@ -17,13 +17,14 @@
     content-block()
 
     h1
-      col(8,2)
+      col(12)
       font-size 35px
       color $white
-      padding 50px 0
+      padding 50px 0 20px
       line-height 1.2
 
       @media $tablet
+        col(8,2)
         font-size 45px
         padding 70px 0 50px
 
@@ -32,29 +33,32 @@
         padding 80px 0 65px
 
      .hero-image
-      @media $tablet
        col(12)
-       margin-bottom -75px
-              
-      @media $desktop
-       col(10,1)
-       margin-bottom -125px
+       margin-bottom -50px
+       
+       @media $tablet
+        col(12)
+        margin-bottom -75px
+                
+        @media $desktop
+         col(10,1)
+         margin-bottom -125px
 
-.core-statement    
+.core-statement   
+  col(12)
+   
   h2
-    col(12)
     font-size 25px
     text-align center
     line-height 1.4em
     padding 40px 0 10px
-    
 
     @media $tablet
-      col(10,1)
+      col(10,2)
       font-size 40px
 
     @media $desktop
-      col(8,2)
+      col(10,2)
       font-size 40px
       line-height 1.3em
 
@@ -99,7 +103,6 @@
       min-height 200px
 
       & > div
-
         @media $desktop
           padding 0 10% 0 0
 
@@ -195,27 +198,28 @@
     font-size 25px
     text-align center
     line-height 1.4em
-    margin-bottom 75px
-
+    margin 75px 0
+    
     @media $tablet
       col(10,1)
       font-size 40px
       line-height 1.3em
+      margin 125px 0
         
     @media $desktop
       col(8,2)
 
-    &:before
+    &:after
       content ''
       display block
       border-bottom 1px solid $gold
       max-width 200px
       height 1px
-      margin 75px auto 25px auto
+      margin 25px auto 0 auto
 
       @media $tablet
         max-width 300px
-        margin 125px auto 50px auto
+        margin 50px auto 0 auto
 
 .caption
   background $light-black
