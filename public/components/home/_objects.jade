@@ -2,44 +2,32 @@ section#home-objects
   .content-block
   
     .object-wide
-      a.neo-static(href='/neo')
+      a.neo-static(href='#{neo_url}')
         div
           img(src='../images/object_neo_home@2x.png')
           .border
-
       .captioned
-        p A process grounded sales pitch
-          span  for 
-          | Neo Innovation
+        p 
+          a(href='#{neo_url}') Neo Innovation 
+            span &mdash; a brand refresh in honor of process
 
     .columns
-    
       .object-tall
-        a.mociun-static(href='#')
+        a.mociun-static(href='#{mociun_url}')
           div
             img(src='../images/object_mociun_home@2x.png')
             .border
-
         .captioned
-          p Elevated ecommerce
-            span  for 
-            | Mociun
+          p 
+            a(href='#{mociun_url}') Mociun 
+              span &mdash; elevated ecommerce
 
-      .object-tall.testimonial
+      .object-tall.availability
         div
-          ul
-            li Can I get a witness?
-            li Anybeast’s fresh perspective and user centered thinking helped us prioritize our redesign and reframed how we thought about presenting our product to our customers.
-            li Paul Miser, CEO
-            li The Chinatown Bureau
-
-      //- .object-tall
-      //-   .coming-soon
-      //-     div
-      //-       ul
-      //-         li Something shiny
-      //-         li IMAGE HERE
-      //-         li Coming soon
+          img(src='../images/object_ticket_home@2x.gif')
+          h2 Open for new projects
+          p February 2017+
+              
         
       .object-tall.broadside
         div
@@ -57,12 +45,21 @@ section#home-objects
             li.arrow-head-down
                         
       .object-tall
-        a.keurig-static(href='#')
+        a.keurig-static(href='#{keurig_url}')
           div
             img(src='../images/object_keurig_home@2x.png')
             .border
-
         .captioned
-          p The personal coffee shop
-            span  for 
-            | Keurig
+          p 
+            a(href='#{keurig_url}') Keurig 
+              span &mdash; the coffee shop just for you
+          
+    .object-wide
+      .lincoln-static
+        div
+          img(src='../images/object_lincoln_home@2x.png')
+          .border
+
+      .captioned
+        p
+          span.silver Coming soon

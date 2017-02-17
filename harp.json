@@ -7,8 +7,6 @@
     "neo_url": "/neo",
     "keurig_url": "/keurig",
     "mociun_url": "/mociun",
-    "time_url": "/time",
-    "auto_url": "/auto",    
 
     "neo_next_img": "../images/neo/H@2x.png"
 
