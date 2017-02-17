@@ -1,44 +1,73 @@
+// Individual hero treatments
+
+.neo-hero
+  background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
+
+.mociun-hero
+  background linear-gradient(to bottom left, #F2E3C9, #E07761)
+  background url('../images/mociun/mociun-hero-bkg@2x.png') center no-repeat
+  background-size cover
+  
+.keurig-hero
+    background linear-gradient(to bottom, #2C2C2C, #2D2D2D)
+
 .core-statement, .full-column-image, .two-column-split, .multi-image, .end-statement
   content-block()
-    
+
+// -.-.-.-.-.-.-.-.-.-.- // 
+ 
 #hero
   background-block()
-  margin-bottom 75px
-
-  @media $tablet
-    margin-bottom 200px
-
+  
+  .container-flush
+    text-align center
+    content-block()
+    margin-bottom 75px  
+  
   .container
     text-align center
     content-block()
+    margin-bottom 75px
 
-    h1
+    @media $tablet
+      margin-bottom 150px
+    
+  h1
+    col(12)
+    font-size 35px
+    color $white
+    padding 50px 0 20px
+    line-height 1.2
+
+    @media $tablet
+      col(8,2)
+      font-size 45px
+      padding 70px 0 50px
+
+    @media $desktop
+      font-size 60px
+      padding 80px 0 65px
+
+   .hero-image
+     col(12)
+     margin-bottom -50px
+     
+     @media $tablet
       col(12)
-      font-size 35px
-      color $white
-      padding 50px 0 20px
-      line-height 1.2
-
-      @media $tablet
-        col(8,2)
-        font-size 45px
-        padding 70px 0 50px
-
+      margin-bottom -75px
+              
       @media $desktop
-        font-size 60px
-        padding 80px 0 65px
+       col(10,1)
+       margin-bottom -125px
 
-     .hero-image
-       col(12)
-       margin-bottom -50px
-       
-       @media $tablet
-        col(12)
-        margin-bottom -75px
-                
-        @media $desktop
-         col(10,1)
-         margin-bottom -125px
+   .hero-image-flush
+     col(12)
+     
+     @media $tablet
+      col(12)
+              
+      @media $desktop
+       col(8,2)
 
 .core-statement   
   col(12)
@@ -70,9 +99,10 @@
         max-width 300px
         margin 50px auto 125px auto
 
-.gallery
-  @media $desktop
-    col(12)
+.full-column-image
+  .gallery
+    @media $desktop
+      col(12)
     
 .two-column-split
   content-block(flex-start, flex-start, center)
@@ -112,7 +142,7 @@
     margin-top 100px
 
   @media $desktop
-    margin 150px 0
+    margin 125px 0 90px
 
   .column-text-a
     col(12)
@@ -132,7 +162,6 @@
     @media $desktop
       col(5)
       display block
-
 
 .wrapper
   min-height 200px
@@ -212,13 +241,14 @@
       & > img:first-child
         margin-bottom 20px
 
-
 .full-bleed
   background-block()
-  background linear-gradient(#251D42, #463B73)
 
   img
     margin 0 auto
+    
+.neo-full-bleed
+    background linear-gradient(#251D42, #463B73)
 
 .end-statement
   h2
@@ -235,7 +265,7 @@
       margin 125px 0
         
     @media $desktop
-      col(8,2)
+      col(10,1)
 
     &:after
       content ''
@@ -248,7 +278,7 @@
       @media $tablet
         max-width 300px
         margin 50px auto 0 auto
-
+    
 .caption
   background $light-black
   color $faint-grey
@@ -266,13 +296,9 @@
       font-weight bold
       color $white
 
-// Individual hero treatments
-.neo-hero
-  background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
-
-.mociun-hero
-  background linear-gradient(to bottom left, #F2E3C9, #E07761)
-  background url('../images/mociun/mociun-hero-bkg@2x.png') center no-repeat
-  background-size cover
+.pusher
+  col(12)
+  height 75px
   
 
+  
