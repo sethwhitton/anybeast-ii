@@ -28,13 +28,8 @@
         align-items(center)
         
         & > div
-          col(10,1)
-          margin-bottom 25px
-          
-          @media $tablet
-            margin 75px auto
-          
-        
+          margin 0 50px
+                  
           h2
             text-align center
             text-transform uppercase
@@ -47,26 +42,27 @@
               text-align left
           
           ul
-            flexbox()
-            flex-direction column
+            display flex
             flex-wrap wrap
-            max-height 00px
-            max-width 800px
-            
-            @media $desktop
-              max-height 400px  
+            margin-left -10px
+            margin-top -10px
                   
             li
               font-size 34px
-              margin 15px 0
               text-align center
               white-space nowrap
               display block
+              border 1px solid blue
+              
                 
               @media $desktop
-                text-align left
-                col(5)
                 font-size 40px
+                text-align left
+                flex 1 0 calc(50% - 10px)
+                box-sizing border-box
+                padding 10px
+                margin-left 10px
+                margin-top 10px
                 
               a
                 color $white
