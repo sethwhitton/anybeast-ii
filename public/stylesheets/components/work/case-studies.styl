@@ -1,7 +1,3 @@
-// Individual hero treatments
-.neo-hero
-  background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
-
 .core-statement, .full-column-image, .two-column-split, .multi-image, .end-statement
   content-block()
     
@@ -87,8 +83,38 @@
 
   @media $desktop
     margin 150px 0
+    
+.column-a
+  col(12)
 
-  .column-a
+  @media $tablet
+    col(10,2)
+
+  @media $desktop
+    col(5,2)
+    flex-wrap wrap
+    height 100%
+
+.column-b
+  display none
+  
+  @media $desktop
+    col(5)
+    display block
+
+// Class for text-only columns
+
+.two-column-text
+  content-block()
+  margin 75px 0
+
+  @media $tablet
+    margin-top 100px
+
+  @media $desktop
+    margin 150px 0
+
+  .column-text-a
     col(12)
 
     @media $tablet
@@ -99,52 +125,55 @@
       flex-wrap wrap
       height 100%
 
-    & > .wrapper
-      min-height 200px
-
-      & > div
-        @media $desktop
-          padding 0 10% 0 0
-
-        h4
-          font-size 14px
-          text-transform uppercase
-          color $gold
-          letter-spacing 1px
-          margin-bottom 15px
-
-        h3
-          font-size 26px
-          color $white
-          margin-bottom 15px
-
-        p
-          color $silver
-          font-size 18px
-          line-height 1.7em
-          
-          @media $desktop
-            max-width 390px
-
-      & > div:first-child
-        margin-bottom 50px
-
-  .column-b
-    display none
+  .column-text-b
+    @media $tablet
+      col(10,2)
     
     @media $desktop
       col(5)
       display block
 
-    img
-      max-width 300px
-      margin 0 auto
 
-      @media $tablet
-        max-width 500px
+.wrapper
+  min-height 200px
+  
+  & > div
+    @media $desktop
+      padding 0 10% 0 0
 
+    h4
+      font-size 14px
+      text-transform uppercase
+      color $gold
+      letter-spacing 1px
+      margin-bottom 15px
+
+    h3
+      font-size 26px
+      color $white
+      margin-bottom 15px
+
+    p
+      color $silver
+      font-size 18px
+      line-height 1.7em
+      
       @media $desktop
-        width 100%
+        max-width 390px
+
+  & > div:first-child
+    margin-bottom 50px
+
+
+  img
+    max-width 300px
+    margin 0 auto
+
+    @media $tablet
+      max-width 500px
+
+    @media $desktop
+      width 100%
 
 .multi-image
   margin 75px 0
@@ -175,8 +204,6 @@
     .small
       @media $tablet
         col(6)
-
-      @media $tablet
         margin-top 140px
 
       @media $desktop
@@ -184,6 +211,7 @@
 
       & > img:first-child
         margin-bottom 20px
+
 
 .full-bleed
   background-block()
@@ -234,8 +262,17 @@
   & > p
     color $faint-grey
 
-    
     & > .bold
       font-weight bold
       color $white
+
+// Individual hero treatments
+.neo-hero
+  background radial-gradient(farthest-side at 50% 100%, #6557A4, #251D42)
+
+.mociun-hero
+  background linear-gradient(to bottom left, #F2E3C9, #E07761)
+  background url('../images/mociun/mociun-hero-bkg@2x.png') center no-repeat
+  background-size cover
+  
 

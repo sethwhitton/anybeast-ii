@@ -7,8 +7,8 @@ $(document).ready(function(){
       $('.overlay').toggleClass('open');
       });
 
-    $('.main-gallery').flickity({
-      cellAlign: 'left',
-      contain: true
-      });
+    // $('.main-gallery').flickity({
+    //   cellAlign: 'left',
+    //   contain: true
+    //   });
 });
