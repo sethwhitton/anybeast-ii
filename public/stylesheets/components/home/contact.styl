@@ -1,0 +1,32 @@
+#home-contact
+  background-block()  
+
+  & > .content-block
+    content-block(flex-start, flex-start, center)
+    height 100vh
+    
+    div 
+      col(10,1)
+      @media $tablet
+        col(10,1)
+      @media $desktop
+        col(8,1)
+              
+  .say-hey
+    border-bottom 1px solid $gold 
+    text-align center
+    font-size 32px
+    line-height 1.6em
+    margin-bottom 25px
+    text-decoration none
+    color white
+    display inline-block
+    
+    @media $tablet
+      text-align left
+      font-size 40px
+      line-height 1.4em
+      
+    @media $desktop
+      font-size 44px
+      line-height 1.5em 
