@@ -15,7 +15,7 @@
       
       @media $tablet
         min-height 720px
-      
+
       .border
         display block
         border-image url(../images/frame.border-image.png) 54 52 52 53 round round
@@ -24,28 +24,28 @@
         border-width 30px
         height 100%
         width 100%
-        flexbox()
-        align-items(center)
         
         & > div
-          margin 0 50px
-                  
+          content-block(space-between)
+          
           h2
+            flex 0 0 100%
             text-align center
             text-transform uppercase
             color $gold
             font-size 14px
             margin-bottom 25px
             letter-spacing 1px
+
             
             @media $desktop
               text-align left
           
           ul
-            display flex
-            flex-wrap wrap
-            margin-left -10px
-            margin-top -10px
+            // col(4)
+            // margin-left -10px
+            // margin-top -10px
+            // padding 0 30px 0 0 !important
                   
             li
               font-size 34px
@@ -54,14 +54,12 @@
               display block
               border 1px solid blue
               
-                
               @media $desktop
                 font-size 40px
                 text-align left
                 flex 1 0 calc(50% - 10px)
                 box-sizing border-box
-                padding 10px
-                margin-left 10px
+                padding 10px 0
                 margin-top 10px
                 
               a

@@ -2,39 +2,25 @@ $(document).ready(function(){
   
 // Frame Element
 
-  var about = $('.home-about'),
+  var about = $('#home-objects'),
       clouds = $('#clouds');
 
 // Frame and Transition Waypoints
 
   about.waypoint({
-    handler: function() {
+    handler: function(direction) {
       if (direction == 'down') {
-        clouds.addClass('fixed');
+        clouds.removeClass('fixed')
+        clouds.addClass('centered');
+        
       }
       else {
-        clouds.removeClass('fixed');
+        clouds.removeClass('centered');
+        clouds.addClass('fixed');
+        
       }
     },
-    offset: '50'
+    offset: '50%'
   });
-
-
-    // Menu overlay 
-    // var toggle = $('.toggle-overlay'),
-    //     aside = $('.overlay');
-    //         
-    // toggle.click(function() {
-    //   $('.overlay').toggleClass('open');
-    //   });
-    
-          
-    // Flickity gallery
-    // $('.main-gallery').flickity({
-    //   cellAlign: 'left',
-    //   contain: true
-    //   });
-    console.log(about)
-    console.log(clouds)
 
 });
