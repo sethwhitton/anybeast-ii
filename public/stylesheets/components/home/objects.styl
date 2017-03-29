@@ -12,6 +12,18 @@
         & > div
           position relative
     
+    .img-full
+      display none
+      
+      @media $tablet
+        display block
+      
+    .img-mobile    
+      display block
+      
+      @media $tablet
+        display none
+    
     .columns     
       col(10,1)
       content-block(flex-start, flex-start, center)
@@ -154,13 +166,32 @@
             text-align center
 
 .border
+  display none
+    
+  @media $tablet
+    display block
+    position absolute
+    top 10px
+    left 10px
+    right 10px
+    bottom 10px
+    border 1px solid $silver
+    z-index 2
+
+.border-micro
   position absolute
-  top 10px
-  left 10px
-  right 10px
-  bottom 10px
+  top 5px
+  left 5px
+  right 5px
+  bottom 5px
   border 1px solid $silver
-  z-index 2
+  z-index 2 
+  
+  @media $phone
+    display block
+    
+  @media $tablet
+    display none
 
 .captioned
   text-transform uppercase
