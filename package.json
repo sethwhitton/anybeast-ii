@@ -1,7 +1,7 @@
 {
   "name": "Anybeast.com",
-  "version": "1.0.0",
-  "description": "Marketing website",
+  "version": "2.0.0",
+  "description": "Online home of Anybeast – Brand and Experience Design Studio, New York",
   "dependencies": {
     "express": "^4.13.4",
     "harp": "^0.20.3"
